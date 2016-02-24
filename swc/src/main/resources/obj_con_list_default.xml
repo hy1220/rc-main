@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<obj_con>
+	<obj_con_1>
+		<number>1#</number>
+		<spot_light>160</spot_light>
+		<set_light>180</set_light>
+		<condenser_insert>0</condenser_insert>
+	</obj_con_1>
+	<obj_con_2>
+		<number>2#</number>
+		<spot_light>120</spot_light>
+		<set_light>140</set_light>
+		<condenser_insert>0</condenser_insert>
+	</obj_con_2>
+	<obj_con_3>
+		<number>3#</number>
+		<spot_light>80</spot_light>
+		<set_light>100</set_light>
+		<condenser_insert>1</condenser_insert>
+	</obj_con_3>
+	<obj_con_4>
+		<number>4#</number>
+		<spot_light>40</spot_light>
+		<set_light>60</set_light>
+		<condenser_insert>1</condenser_insert>
+	</obj_con_4>
+	<obj_con_5>
+		<number>5#</number>
+		<spot_light>0</spot_light>
+		<set_light>0</set_light>
+		<condenser_insert>1</condenser_insert>
+	</obj_con_5>
+</obj_con> 

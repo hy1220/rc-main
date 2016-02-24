@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/air" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/air/src/main/resources/assets/main（2016-02-18用户登录信息共享）.lua" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/swc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/Command.mxml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/swc/src/main/resources/assets/sound/msgS.mp3" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/swc/src/main/resources/assets/sound/usb1.mp3" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/swf" charset="UTF-8" />
+  </component>
+</project>

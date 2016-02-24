@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009"
+                    xmlns:s="library://ns.adobe.com/flex/spark"
+                    xmlns:mx="library://ns.adobe.com/flex/mx"
+                    width="100%" height="100%"
+                    horizontalCenter="0" verticalCenter="0"
+                    creationComplete="creationCompleteHandler(event)"
+                    mouseDown="mouseDownHandler(event)">
+
+  <fx:Script>
+    <![CDATA[
+    import com.gxuwz.rctrlm.utils.fluorinefx.aperture.LocalObject;
+    import com.gxuwz.rctrlm.views.videoCtrl.mangerGesture.MGesture;
+    import mx.controls.Label;
+    import mx.events.FlexEvent;
+    import spark.components.Alert;
+
+    [Bindable]
+    private var _lc:LocalObject;
+
+    public function get lc():LocalObject {
+      return _lc;
+    }
+
+    public function set lc(value:LocalObject):void {
+      _lc = value;
+      trace(value.toString()+"=====================lc is ");
+    }
+
+    private var gesture:MGesture;				//Instance of MGesture class we've written
+    private var gestureMag:Number;			//Magnitude of current gesture made
+
+    private var direction:int = -1;			//Current gesture made, -1 is invalid, 0~7 is valid
+    private var maxMag:Number = 40;			//Magnitude capped at maximum
+    private var currentAngle:Number = 0;	//Angle on easing function for animation
+
+    public var lineMSG:Object;
+    public var lineLabel:Label;
+    private var _camera:Camera;
+
+    public var cmdString:String;  //保存命令
+
+    protected function creationCompleteHandler(event:FlexEvent):void {
+
+      gesture = new MGesture(this);	//Initiate MGesture for gesture detection
+      lineLabel = new Label();
+      this.addElement(lineLabel);
+      _camera = Camera.getCamera() as Camera;
+
+    }
+
+    protected function mouseDownHandler(event:MouseEvent):void {
+      lineMSG = new Object();
+      //add some extra data to ensure every sent object is unique
+      lineMSG.id = new Date().time;
+      //var lineStartPoint:Point=new Point(e.localX, e.localY);
+      var lineStartPoint:Point = new Point(this.mouseX, this.mouseY);
+      lineMSG.lineStartPoint = lineStartPoint;
+
+      startDrawingLine(lineMSG);
+      gesture.start();
+
+      this.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove, false, 0, true);
+      this.addEventListener(MouseEvent.MOUSE_UP, onMouseUp, false, 0, true);
+    }
+
+    public function startDrawingLine(startPoint:Object):void {
+      initLine();
+      drawLineUI.graphics.moveTo(startPoint.lineStartPoint.x, startPoint.lineStartPoint.y);
+      trace("startDrawingLine:" + startPoint.lineStartPoint.x + ", " + startPoint.lineStartPoint.y);
+
+    }
+
+    private function onMouseMove(e:MouseEvent):void {
+
+      if (e.buttonDown) {
+        var lineEndPoint:Point = new Point(this.mouseX, this.mouseY);
+        lineMSG.lineEndPoint = lineEndPoint;
+        mouseMoveDirection(lineMSG);
+        onDrawingLine(lineMSG);
+      } else {
+        drawLineUI.graphics.clear();
+      }
+    }
+
+    public function onDrawingLine(drawingPoint:Object):void {
+      trace(drawingPoint + "  in VideoCtrl.mxml's  onDrawingLine");
+      drawLineUI.graphics.clear();//当鼠标移动，擦除上次画的线，重新画线
+      initLine();  //初始化线条颜色
+      drawLineUI.graphics.moveTo(drawingPoint.lineStartPoint.x, drawingPoint.lineStartPoint.y);
+      drawLineUI.graphics.lineTo(drawingPoint.lineEndPoint.x, drawingPoint.lineEndPoint.y);
+      //trace("onDrawingLine:"+drawingPoint.lineEndPoint.x+", "+drawingPoint.lineEndPoint.y);
+
+      var angle:Number = polarAngle(new Point(drawingPoint.lineEndPoint.x, drawingPoint.lineEndPoint.y),
+              new Point(drawingPoint.lineStartPoint.x, drawingPoint.lineStartPoint.y));
+
+      // draw arrow head
+      drawLineUI.graphics.moveTo(drawingPoint.lineEndPoint.x - (20 * Math.cos((angle - 45) * Math.PI / 180)),
+              drawingPoint.lineEndPoint.y - (20 * Math.sin((angle - 45) * Math.PI / 180)));
+
+      drawLineUI.graphics.lineTo(drawingPoint.lineEndPoint.x + (5 * Math.cos((angle) * Math.PI / 180)),
+              drawingPoint.lineEndPoint.y + (5 * Math.sin((angle) * Math.PI / 180)));
+
+      drawLineUI.graphics.lineTo(drawingPoint.lineEndPoint.x - (20 * Math.cos((angle + 45) * Math.PI / 180)),
+              drawingPoint.lineEndPoint.y - (20 * Math.sin((angle + 45) * Math.PI / 180)));
+      //add label
+
+      lineLabel.setStyle('color', 0x00ff00);
+      lineLabel.setStyle('fontSize', 15);
+      lineLabel.x = drawingPoint.lineEndPoint.x + 15;
+      lineLabel.y = drawingPoint.lineEndPoint.y - 15;
+    }
+
+    protected function polarAngle(point:Point, center:Point = null):Number {
+      if (!center)
+        center = new Point(0, 0);
+      return Math.atan2(point.y - center.y, point.x - center.x) * 180 / Math.PI;
+    }
+
+    private function onMouseUp(e:MouseEvent):void {
+      trace(cmdString+" cmdString in videoCtrl onMouseUp  and _lc is "+_lc.toString());
+      if (cmdString){
+        _lc.sendMessageFun(cmdString);
+      }
+     // trace( _lc+"   _lc.sendMessageFun")
+      cmdString = null;
+      lineLabel.text = "";
+
+      drawLineUI.graphics.clear();
+      trace("on vdDisplay onMouseUp  ");
+      this.removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
+      this.removeEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+    }
+
+    public function getMoveDistance(direction:int, lineMessge:Object):String {
+      var currentMag:Number;
+      if (direction == 0 || direction == 2)
+        currentMag = Math.round(Math.abs(lineMessge.lineEndPoint.x - lineMessge.lineStartPoint.x) / 10);
+      if (direction == 1 || direction == 3)
+        currentMag = Math.round(Math.abs(lineMessge.lineEndPoint.y - lineMessge.lineStartPoint.y) / 10);
+      if (currentMag > 10)
+        currentMag = 10;
+      if (currentMag < 2)
+        currentMag = 2;
+      var str:String;
+      if (currentMag <= 9)
+        str = String("0" + currentMag);
+      else
+        str = String(currentMag);
+      return str;
+
+    }
+
+    private function mouseMoveDirection(lineMSG:Object):void {
+      gestureMag = gesture.update().getMagnitude() / 2;
+      gestureMag = Math.min(gestureMag, maxMag);
+      direction = gesture.evalDirections();
+      trace(direction + "  direction  under draw ");
+      switch (direction) {
+        case 0:
+          cmdString = "$0MD400000000" + getMoveDistance(direction, lineMSG) + "!";
+          lineLabel.text = "向右移动";
+          break;
+        case 1:
+          cmdString = "$0MU300000000" + getMoveDistance(direction, lineMSG) + "!";
+          lineLabel.text = "向前移动";
+          break;
+        case 2:
+          cmdString = "$0MU400000000" + getMoveDistance(direction, lineMSG) + "!";
+          lineLabel.text = "向左移动";
+          break;
+        case 3:
+          cmdString = "$0MD300000000" + getMoveDistance(direction, lineMSG) + "!";
+          lineLabel.text = "向后移动";
+          break;
+        //case 4:
+        //lineLabel.text="Direction：Southeast Moving";
+        ///break;
+        //case 5:
+        //lineLabel.text="Direction：Southwest Moving";
+        //break;
+        //case 6:
+        //lineLabel.text="Direction：Northwest Moving";
+        //break;
+        //case 7:
+        //lineLabel.text="Direction：Northeast Moving";
+        //break;
+        default:
+          lineLabel.text = "无法检测方向";
+          break;
+      }
+    }
+
+    public function initLine():void {
+      drawLineUI.graphics.beginFill(0xF00FFF);
+      drawLineUI.graphics.endFill();
+      drawLineUI.graphics.lineStyle(2, 0x00ff00);
+    }
+
+    ]]>
+  </fx:Script>
+<!--<mx:Canvas width="100%" height="100%" verticalCenter="0" horizontalCenter="0">-->
+  <mx:VideoDisplay id="localVdCam_vd" width="100%" height="100%"
+                   horizontalCenter="0"
+                   verticalCenter="0"/>
+<!--</mx:Canvas>-->
+
+  <!-- 用作画图取得图像，以UIComponnent画图，并保存-->
+  <mx:UIComponent id="drawLineUI"
+                  x="0" y="0"
+                  width="100%" height="100%"/>
+
+</s:NavigatorContent>

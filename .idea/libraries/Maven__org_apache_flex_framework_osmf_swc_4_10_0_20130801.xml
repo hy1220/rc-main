@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.flex.framework:osmf:swc:4.10.0.20130801" type="flex">
+    <CLASSES>
+      <root url="jar://E:/m2/org/apache/flex/framework/osmf/4.10.0.20130801/osmf-4.10.0.20130801.swc!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/m2/org/apache/flex/framework/osmf/4.10.0.20130801/osmf-4.10.0.20130801-asdoc.zip!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/m2/org/apache/flex/framework/osmf/4.10.0.20130801/osmf-4.10.0.20130801-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rCtrlMicroscope-air.iml" filepath="$PROJECT_DIR$/rCtrlMicroscope-air.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swc/rCtrlMicroscope-air-swc.iml" filepath="$PROJECT_DIR$/swc/rCtrlMicroscope-air-swc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swf/rCtrlMicroscope-air-swf.iml" filepath="$PROJECT_DIR$/swf/rCtrlMicroscope-air-swf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/air/rCtrlMicroscope-control-air.iml" filepath="$PROJECT_DIR$/air/rCtrlMicroscope-control-air.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+  派发连接服务和邀请的信息
+-->
+<s:HGroup
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        creationComplete="initComp()">
+
+<fx:Script>
+  <![CDATA[
+
+import com.gxuwz.rctrlm.events.ConServerBarEvent;
+import com.gxuwz.rctrlm.events.EventDispatcherFactory;
+import com.gxuwz.rctrlm.presenter.ConServerBarPresenter;
+import spark.components.Alert;
+
+  // login/registration states
+
+  public const loginNotConnected:String = "LoginNotConnected";
+  public const loginConnecting:String = "LoginConnecting";
+  public const loginConnected:String = "LoginConnected";
+  public const loginDisconnecting:String = "LoginDisconnecting";
+
+  // call states, only used when LoginConnected
+  public const callReady:String = "CallReady";
+  public const callCalling:String = "CallCalling";
+  public const callRinging:String = "CallRinging";
+  public const callEstablished:String = "CallEstablished";
+  public const callFailed:String = "CallFailed";
+
+  public const _Invite:String="Invite";
+  public const _Accept:String="Accept";
+  public const _Reject:String="Reject";
+
+  private var conServerBarPresenter:ConServerBarPresenter;
+
+  [Bindable] private var _cameraName:String;
+
+  //获取摄像头
+  public function get cameraName():String {
+    return _cameraName;
+  }
+
+  public function set cameraName(value:String):void {
+    _cameraName = value;
+  }
+
+  [Bindable]private var _ringerChooseBool:Boolean;
+  private var ringer:Sound;
+  private var ringerChannel:SoundChannel;
+  public function get ringerChooseBool():Boolean
+  {
+    return _ringerChooseBool;
+  }
+
+  public function set ringerChooseBool(value:Boolean):void
+  {
+    _ringerChooseBool = value;
+    if(_ringerChooseBool){
+      ring();
+    }else{
+      stopRing();
+    }
+  }
+
+
+  public function initComp():void {
+    conServerBarPresenter=new ConServerBarPresenter(this); //为模块注册对象
+  }
+
+  /**
+   * 用户点击“连接”按钮，将会执行一下功能：
+   * 1.派发事件UserNameSaveEvent，将输入的用户名存储到共享数据localSO中；
+   * 2.创建一个 NetConnection 对象，并为将来连接到这个对象的对象创建一个Object对象及其方法。调用 connect() 方法以建立连接。
+   */
+  private function onConnect():void {
+//    trace("dispatch conserver event");
+//    var event:ConServerBarEvent =new ConServerBarEvent(ConServerBarEvent.TRY_CONNECT_SERVER_EVENT);//尝试连连服务
+//
+//    event.connectURL=serverAddrInput.text;
+//    event.userName=userNameInput.text;
+//
+//    EventDispatcherFactory.getEventDispatcher().dispatchEvent(event);
+    if((serverAddrInput.text).length>0 && (userNameInput.text).length>0){
+      dispatchEvent(new MouseEvent("ConnectToServerEvent"));
+    } else{
+      Alert.show("请输入服务器地址和用户名");
+    }
+  }
+
+  /**
+   * 用户点击“取消”按钮，派发事件OnHangupEvent,将会执行一下功能：
+   *
+   * 1.清除 idManager和netConnection对象
+   * 2.本身回到LoginNotConnected状态
+   * 3.断开服务
+   */
+  private function onDisconnect():void {
+//    trace("Disconnecting.\n");
+//    var event:ConServerBarEvent =new ConServerBarEvent(ConServerBarEvent.TRY_DISCONNECT_SERVER_EVENT);//尝试断开连接
+//    EventDispatcherFactory.getEventDispatcher().dispatchEvent(event);
+    onCancel(3);
+
+  }
+
+  /**
+   * 用户点击“呼叫”按钮，派发事件onCallEvent,将会执行一下功能：
+   * 1.判断输入的呼叫用户名是否为空，如为空提示用户。
+   * 2.在交换PeerID服务器对象 idManager查找输入的用户名是否已经注册。
+   */
+  private function onCall():void {
+    if (userNameInput.text != calleeInput.text  && (calleeInput.text.length)>0){
+//      var event:ConServerBarEvent =new ConServerBarEvent(ConServerBarEvent.TRY_CALLUSER_EVENT);//尝试呼叫远程用户
+//      event.remoteUser=calleeInput.text;
+//      event.action=_Invite;
+//      EventDispatcherFactory.getEventDispatcher().dispatchEvent(event);
+      dispatchEvent(new MouseEvent("CallExpertEvent"));
+    } else{
+      Alert.show("不必呼叫自己！");
+    }
+
+  }
+
+  /**
+   * 用户点击“正在呼叫中的取消”按钮，“已经建立连接”按钮，“呼叫失败”按钮，
+   * 都派发事件onCancelEvent,
+   */
+  private function onCancel(choose:Number):void {
+//    var event:ConServerBarEvent;
+//    if(choose==1){
+//      event =new ConServerBarEvent(ConServerBarEvent.TRY_DISCONNECT_SERVER_EVENT);
+//      //尝试断开远程连接
+//    }else if(choose==2){
+//      //尝试终止呼叫用户
+//      event =new ConServerBarEvent(ConServerBarEvent.TRY_CANCEL_CALLUSER_EVENT);
+//    }else if(choose==3){
+//      //与远程用户断开
+//      event=new ConServerBarEvent(ConServerBarEvent.TRY_DISCONNECT_REMOTE_USER_EVENT);
+//    }
+//    EventDispatcherFactory.getEventDispatcher().dispatchEvent(event);
+    if(choose==3){
+      dispatchEvent(new MouseEvent("CancelToCallUserEvent"));
+    }else
+      dispatchEvent(new MouseEvent("DisconnectToServerEvent"));
+  }
+
+  private function videoQualityChanged(e:Event = null):void {
+//    var camera:Camera = Camera.getCamera(_cameraName);
+//    if (camera) {
+//      camera.setQuality(0, videoQualitySlider.value);
+//      trace("Setting camera quality to: " + videoQualitySlider.value + "\n");
+//    }
+  }
+
+  protected function chat_clickHandler(event:MouseEvent):void {
+    // TODO Auto-generated method stub
+    dispatchEvent(new Event("onChatEvent"));
+  }
+
+  private function onInviteExcept():void {
+
+  }
+
+    private function ring():void
+    {
+      ringer = new Sound();
+
+      ringer.addEventListener("sampleData", ringTone);
+      ringerChannel = ringer.play();
+    }
+
+    private function stopRing():void
+    {
+      if (ringerChannel)
+      {
+        ringerChannel.stop();
+
+        ringer.removeEventListener("sampleData", ringTone);
+
+        ringer = null;
+        ringerChannel = null;
+      }
+    }
+
+    private function ringTone(event:SampleDataEvent):void
+    {
+      for (var c:int=0; c<8192; c++)
+      {
+        var pos:Number = Number(c + event.position) / Number(6 * 44100);
+        var frac:Number = pos - int(pos);
+        var sample:Number;
+        if (frac < 0.066)
+        {
+          sample = 0.4 * Math.sin(2* Math.PI / (44100/784) * (Number(c + event.position)));
+        }
+        else if (frac < 0.333)
+        {
+          sample = 0.2 * (Math.sin(2* Math.PI / (44100/646) * (Number(c + event.position)))
+                  + Math.sin(2* Math.PI / (44100/672) * (Number(c + event.position)))
+                  + Math.sin(2* Math.PI / (44100/1034) * (Number(c + event.position)))
+                  + Math.sin(2* Math.PI / (44100/1060) * (Number(c + event.position))));
+        }
+        else
+        {
+          sample = 0;
+        }
+        event.data.writeFloat(sample);
+        event.data.writeFloat(sample);
+      }
+    }
+
+  ]]>
+</fx:Script>
+  <fx:Metadata>
+
+    [Event(name="ConnectToServerEvent", type="flash.events.MouseEvent")]
+    [Event(name="DisconnectToServerEvent", type="flash.events.MouseEvent")]
+    [Event(name="CancelToCallUserEvent",type="flash.events.MouseEvent")]
+    [Event(name="CallExpertEvent",type="flash.events.MouseEvent")]
+  </fx:Metadata>
+
+  <s:states>
+    <s:State name="LoginNotConnected"/>
+    <s:State name="LoginConnecting"/>
+    <s:State name="LoginConnected"/>
+    <s:State name="LoginDisconnecting"/>
+    <s:State name="CallReady"/>
+    <s:State name="CallCalling"/>
+    <s:State name="CallRinging"/>
+    <s:State name="CallEstablished"/>
+    <s:State name="CallFailed"/>
+  </s:states>
+
+  <!-- Login pane -->
+  <s:HGroup includeIn="LoginNotConnected" verticalAlign="middle"  paddingLeft="2" paddingRight="2" width="70%" >
+    <s:Label text="连接地址" toolTip="请输入连接地址"/>
+    <s:TextInput id="serverAddrInput" text="rtmp://210.36.200.41:1935/RCtrlMicroscope" width="75%" />
+    <s:Label  text="用户名"  toolTip="请输入用户名"/>
+    <s:TextInput id="userNameInput" width="120" text="User Name" enter="{userNameInput.text.length > 0?onConnect():setFocus()}"/>
+    <s:Button label="连接"  id="conButton" click="onConnect()" enabled="{userNameInput.text.length > 0}"/>
+    <s:Button label="终止摄像头发布服务" click="onCancel(2)" />
+  </s:HGroup>
+
+  <!-- Login Connecting pane -->
+  <s:HGroup includeIn="LoginConnecting" verticalAlign="middle">
+    <s:Label text="连接到 {serverAddrInput.text}" />
+    <s:Spacer height="100%" width="30"/>
+    <s:Button label="取消连接" click="onCancel(2)" />
+  </s:HGroup>
+
+  <s:HGroup includeIn="LoginConnected, CallReady, CallCalling, CallRinging, CallEstablished, CallFailed" verticalAlign="middle">
+    <s:Label text="Connected as {userNameInput.text}"
+             text.CallCalling="连接为 {userNameInput.text}"
+             text.CallEstablished="连接为 {userNameInput.text}"
+             text.CallFailed="连接为 {userNameInput.text}"
+             text.CallReady="连接为 {userNameInput.text}"
+             text.CallRinging="连接为{userNameInput.text}"
+             text.LoginConnected="连接为 {userNameInput.text}"/>
+    <s:Button label="DISCONNECT" click="onCancel(2)"
+              label.CallCalling="断开连接"
+              label.CallEstablished="断开连接"
+              label.CallFailed="断开连接"
+              label.CallReady="断开连接"
+              label.CallRinging="断开连接"
+              label.LoginConnected="断开连接"/>
+  </s:HGroup>
+
+  <!--Login Disconnecting pane -->
+  <s:HGroup includeIn="LoginDisconnecting">
+    <s:Label text="Disconnecting from " />
+  </s:HGroup>
+
+  <!--Call Ready pane -->
+  <s:HGroup includeIn="CallReady" verticalAlign="middle">
+    <s:TextInput id="calleeInput" enter="onCall()"/>
+    <s:Button label="呼叫"  click="onCall()"  enabled="{calleeInput.text.length > 0}"/>
+  </s:HGroup>
+
+  <!--Call Calling pane -->
+  <s:HGroup includeIn="CallCalling" verticalAlign="middle">
+    <s:Label text="呼叫 {calleeInput.text} 中" />
+    <!-- 尝试挂断呼叫-->
+    <s:Button label="取消呼叫 {calleeInput.text} " click="onCancel(3)"/>
+  </s:HGroup>
+
+  <!--Call Established pane -->
+  <s:HGroup includeIn="CallEstablished" verticalAlign="middle">
+    <s:Label text="Called  {calleeInput.text}"  />
+    <s:Button label="终止与 {calleeInput.text} 对话" click="onCancel(3)"/>
+    <s:Label id="callTimerText" width="25"/>
+  </s:HGroup>
+
+  <s:HGroup includeIn="CallFailed" verticalAlign="middle">
+    <s:Label text="呼叫 {calleeInput.text}错误" />
+    <!-- 发生错误，挂断连接-->
+    <s:Button label="挂断" click="onCancel(3)"/>
+  </s:HGroup>
+
+  <s:Button id="chat" includeIn="CallEstablished" label="已经与远程用户对话连接" click="chat_clickHandler(event)"/>
+  <!--<s:Label includeIn="CallEstablished" text="质量调整"/>-->
+  <!--<s:HSlider id="videoQualitySlider"-->
+             <!--includeIn="CallEstablished"-->
+             <!--width="100%" showDataTip="false"-->
+             <!--minimum="1" maximum="100" value="80"-->
+             <!--change="videoQualityChanged(event)"/>-->
+</s:HGroup>

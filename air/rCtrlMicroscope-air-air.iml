@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="rCtrlMicroscope-air-air">
+    <configurations>
+      <configuration name="rCtrlMicroscope-air-air" target-platform="Desktop" output-file="rCtrlMicroscope-control-air-1.0-SNAPSHOT.swf" output-folder="$MODULE_DIR$/target">
+        <dependencies>
+          <entries>
+            <entry module-name="rCtrlMicroscope-air-swf" build-configuration-name="rCtrlMicroscope-air-swf">
+              <dependency linkage="Loaded" />
+            </entry>
+            <entry module-name="rCtrlMicroscope-air-swc" build-configuration-name="rCtrlMicroscope-air-swc">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:advancedgrids:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:advancedgrids:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:apache:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:apache:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:authoringsupport:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:charts:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:charts:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:core:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:experimental:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:experimental:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:flash-integration:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:flash-integration:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:flatspark:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:framework:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:framework:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:rpc:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:rpc:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:spark:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:spark:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:sparkskins:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:spark_dmv:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:textLayout:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:textLayout:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:mx:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:mx:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:airframework:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:airframework:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:airspark:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:airspark:rb.swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:crosspromotion:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework.air:gamepad:swc:4.14.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: com.adobe.air.framework:aircore:swc:16.0" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: com.adobe.air.framework:applicationupdater:swc:16.0" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: com.adobe.air.framework:applicationupdater_ui:swc:16.0" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: com.adobe.air.framework:servicemonitor:swc:16.0" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: com.adobe.air.framework:airglobal:swc:16.0" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="Maven: org.apache.flex.framework:osmf:swc:4.10.0.20130801" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="Flexmojos SDK 4.14.1" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.locale" value="en_US" />
+          </map>
+          <option name="resourceFilesMode" value="None" />
+          <option name="additionalConfigFilePath" value="$MODULE_DIR$/../.idea/flexmojos/rCtrlMicroscope-control-air-gxuwz.dspLab.remoteCtrlMicroscope.xml" />
+        </compiler-options>
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/main/air/rCtrlMicroscope-air-app.xml" package-file-name="rCtrlMicroscope-air-air-1.0-SNAPSHOT">
+          <AirSigningOptions keystore-path="$MODULE_DIR$/src/main/resources/sign.p12" use-temp-certificate="false" />
+        </packaging-air-desktop>
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="jdk" jdkName="Flexmojos SDK 4.14.1" jdkType="Flexmojos SDK Type" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:advancedgrids:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:advancedgrids:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:apache:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:apache:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:authoringsupport:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:charts:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:charts:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:core:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:experimental:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:experimental:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:flash-integration:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:flash-integration:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:flatspark:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:framework:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:framework:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:rpc:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:rpc:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:spark:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:spark:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:sparkskins:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:spark_dmv:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:textLayout:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:textLayout:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:mx:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:mx:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:airframework:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:airframework:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:airspark:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:airspark:rb.swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:crosspromotion:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework.air:gamepad:swc:4.14.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.adobe.air.framework:aircore:swc:16.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.adobe.air.framework:applicationupdater:swc:16.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.adobe.air.framework:applicationupdater_ui:swc:16.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.adobe.air.framework:servicemonitor:swc:16.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: com.adobe.air.framework:airglobal:swc:16.0" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.apache.flex.framework:osmf:swc:4.10.0.20130801" level="project" />
+    <orderEntry type="module" module-name="rCtrlMicroscope-air-swf" exported="" />
+    <orderEntry type="module" module-name="rCtrlMicroscope-air-swc" exported="" />
+  </component>
+</module>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<s:GridItemEditor
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark">
+
+  <fx:Script>
+    <![CDATA[
+
+    override public function set value(newValue:Object):void {
+      ns.value = newValue as Number;
+    }
+    override public function get value():Object {
+      return ns.value;
+    }
+    override public function setFocus():void {
+      ns.setFocus();
+    }
+
+    ]]></fx:Script>
+
+  <s:NumericStepper id="ns"
+                    width="100%"
+                    fontWeight="bold"
+                    maximum="52000" minimum="1000"
+                    stepSize="1"/>
+
+</s:GridItemEditor>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="20%" height="100%">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.graphics.codec.JPEGEncoder;
+			import mx.managers.PopUpManager;
+
+			protected function delete_bt_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				dispatchEvent(new Event("onDeleteImgShowEvent"));
+			}
+			
+			
+			//鏀惧ぇ
+			protected function zoom_bt_clickHandler(event:MouseEvent):void
+			{
+				var zImg:ZoomImg= new ZoomImg(); 
+				zImg.img=image;
+				// TODO Auto-generated method stub
+				
+				//	PopUpManager.addPopUp(imgShZoomTW,this,true);
+				PopUpManager.addPopUp(zImg,this.parent.parent.parent,true);
+				zImg.x=100;
+				zImg.y=100;
+				//PopUpManager.centerPopUp(zImg);
+				
+			}
+			//杞Щ
+			protected function Transmission():void{
+				if(selected_chb.selected == true)					
+				{
+					dispatchEvent(new Event("onSelectedImgEvent"));
+					save();
+				} 
+				else 
+				{
+					dispatchEvent(new Event("onCancelSelectedImgEvent"));
+				}
+			}	
+			
+			public static var photoNumber:int=0;
+			
+			//淇濆瓨
+			public function save():void {							  
+				
+				photoNumber++;
+				if(photoNumber>3)
+					photoNumber=1;
+				
+				trace("photoNumber="+photoNumber);
+				var filename:String = "Sample"+photoNumber+".jpg";				
+				var file:File = File.applicationDirectory.resolvePath("bin/"+ filename );
+				var wr:File = new File( file.nativePath );
+				var stream:FileStream = new FileStream();
+				
+				if(selected_chb.selected == true){
+					stream.open( wr , FileMode.WRITE);
+					
+					var data:ByteArray = getJPEG(image.bitmapData.clone());
+
+					stream.writeBytes ( data, 0,data.length );
+					stream.addEventListener(Event.COMPLETE, saveComplete)
+					stream.close();
+				}
+			}
+
+			private function getJPEG(bmd:BitmapData):ByteArray {
+				var jpg:JPEGEncoder = new JPEGEncoder();
+				return jpg.encode(bmd);
+			}
+			private function saveComplete(event:Event):void {
+				
+				trace("complete");
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+	</fx:Declarations>
+	<fx:Metadata>
+		[Event(name="onDeleteImgShowEvent", type="flash.events.MouseEvent")]
+		[Event(name="onSelectedImgEvent", type="flash.events.Event")]
+		[Event(name="onCancelSelectedImgEvent", type="flash.events.Event")]
+		[Event(name="onSaveImgEvent", type="flash.events.Event")]
+	</fx:Metadata>
+	<s:VGroup width="100%" height="100%" id="imgList">
+		<s:Image width="100%" height="100%" id="image"/>
+		<s:HGroup width="100%">
+			<s:Button id="delete_bt" width="35%" height="100%"  label="delete" click="delete_bt_clickHandler(event)"/>
+			<s:CheckBox width="30%" id="selected_chb" height="100%" label="选择" click="Transmission()"/>
+			<s:Button id="zoom_bt" width="35%" height="100%" label="zoom" click="zoom_bt_clickHandler(event)"/>
+		</s:HGroup>
+	</s:VGroup>		
+</s:Group>
+
+

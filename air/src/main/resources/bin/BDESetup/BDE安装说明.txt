@@ -1,0 +1,7 @@
+一、有以下两种情况请下载BDE驱动程序进行安装：
+1、An error occurred while attempting to  initialize the Borland databse Engine ($2109).
+2、Not enough files handles too many open files.You may need to increase MAXFILEHANDLE Limit in IDAPI configuration File......
+
+二、使用注意事项：
+1、 请先将C:\Program Files\Common Files\Borland Shared\BDE的全部文件删除，然后重新安装BDE。
+

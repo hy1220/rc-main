@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<mx:TitleWindow
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:mx="library://ns.adobe.com/flex/mx"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        showCloseButton="true"
+        close="PopUpManager.removePopUp(this)">
+
+  <fx:Script>
+    <![CDATA[
+    import mx.events.CloseEvent;
+    import mx.managers.PopUpManager;
+
+    [Bindable]
+    public var img:Image;
+
+    protected function closeHandler(event:CloseEvent):void
+    {
+      // TODO Auto-generated method stub
+      event.target.removeEventListener("close", closeHandler);
+      PopUpManager.removePopUp(this);
+    }
+
+    ]]></fx:Script>
+  <s:Image id="zoomImg"
+           width="100%" height="100%"
+           source="{img.source}"/>
+
+</mx:TitleWindow>

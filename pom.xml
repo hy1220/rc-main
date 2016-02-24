@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!--<groupId>com.gxuwz.dspLab</groupId>-->
+  <!--<artifactId>remoteCtrlMicroscope-client</artifactId>-->
+  <!--<version>1.0-SNAPSHOT</version>-->
+
+	<groupId>gxuwz.dspLab.remoteCtrlMicroscope</groupId>
+	<artifactId>rCtrlMicroscope-air</artifactId>
+	<version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <modules>
+	  <module>air</module>
+	  <module>swf</module>
+	  <module>swc</module>
+  </modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<flexmojos.version>7.1.0-SNAPSHOT</flexmojos.version>
+		<flex.version>4.14.1</flex.version>
+		<air.version>16.0</air.version>
+		<playerglobal.version>14.0</playerglobal.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>flex-mojos-repository</id>
+			<name>flex-mojos-repository</name>
+			<url>http://210.36.200.38:8081/nexus/content/groups/com.xjzx.videoRecognition/</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>flex-mojos-plugin-repository</id>
+			<url>http://210.36.200.38:8081/nexus/content/groups/com.xjzx.videoRecognition/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<name>artifactory-releases</name>
+			<url>http://210.36.200.38:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>artifactory</id>
+			<name>artifactory-snapshots</name>
+			<url>http://210.36.200.38:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+	<build>
+		<sourceDirectory>src/main/flex</sourceDirectory>
+		<testSourceDirectory>src/test/flex</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>net.flexmojos.oss</groupId>
+				<artifactId>flexmojos-maven-plugin</artifactId>
+				<version>${flexmojos.version}</version>
+				<extensions>true</extensions>
+
+				<configuration>
+					<descriptorTemplate>src/main/air/rCtrlMicroscope-air-app.xml</descriptorTemplate>
+					<storepass>flexmojos</storepass>
+					<!--<description>target/rCtrlMicroscope-air-air-1.0-SNAPSHOT-app.xml</description>-->
+				</configuration>
+
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.flex</groupId>
+						<artifactId>compiler</artifactId>
+						<version>${flex.version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.dll</include>
+					<include>**/*.exe</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+		<!-- Flex SDK dependencies -->
+		<dependency>
+			<groupId>org.apache.flex</groupId>
+			<artifactId>framework</artifactId>
+			<version>${flex.version}</version>
+			<type>pom</type>
+		</dependency>
+		<!-- Air SDK dependencies -->
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>air</artifactId>
+			<version>${flex.version}</version>
+			<type>pom</type>
+		</dependency>
+		<!-- Air runtime dependencies -->
+		<dependency>
+			<groupId>com.adobe.air</groupId>
+			<artifactId>framework</artifactId>
+			<version>${air.version}</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.adobe.air.framework</groupId>
+			<artifactId>airglobal</artifactId>
+			<version>${air.version}</version>
+			<type>swc</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.flex.framework</groupId>
+			<artifactId>osmf</artifactId>
+			<version>4.10.0.20130801</version>
+			<type>swc</type>
+		</dependency>
+	</dependencies>
+
+</project>

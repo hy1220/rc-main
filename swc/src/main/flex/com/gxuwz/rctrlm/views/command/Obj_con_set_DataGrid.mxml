@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<s:DataGrid xmlns:fx="http://ns.adobe.com/mxml/2009"
+            xmlns:s="library://ns.adobe.com/flex/spark">
+
+  <fx:Script>
+    <![CDATA[
+    public function getElementAt(row:int, col:int):Object
+    {
+      if (this.dataProvider.length < row + 1 || this.columns.length < col + 1)
+        return null;
+      else
+        return this.dataProvider.getItemAt(row)[(this.columns.getItemAt(col) as GridColumn).dataField];
+    }
+
+    ]]>
+  </fx:Script>
+
+  <s:columns>
+    <s:ArrayList>
+      <s:GridColumn dataField="number" headerText="序号" editable="false" />
+      <s:GridColumn dataField="spot_light" headerText="聚光栏"  itemEditor="com.gxuwz.rctrlm.views.command.SpotAndSetLightNumStepperEditor"/>
+      <s:GridColumn dataField="set_light" headerText="集光栏" itemEditor="com.gxuwz.rctrlm.views.command.SpotAndSetLightNumStepperEditor"/>
+      <s:GridColumn dataField="condenser_insert"  headerText="聚光镜"
+                    itemEditor="com.gxuwz.rctrlm.views.command.CondenserInsertNumStepperEdit" />
+      <!--<s:GridColumn dataField="focus_set"  headerText="平台初始高度"
+                    itemEditor="com.rctrlm.command.FoucesNumStepperEditor" />-->
+    </s:ArrayList>
+  </s:columns>
+
+</s:DataGrid>

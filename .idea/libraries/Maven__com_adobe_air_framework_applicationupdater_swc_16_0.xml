@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.air.framework:applicationupdater:swc:16.0" type="flex">
+    <CLASSES>
+      <root url="jar://E:/m2/com/adobe/air/framework/applicationupdater/16.0/applicationupdater-16.0.swc!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/m2/com/adobe/air/framework/applicationupdater/16.0/applicationupdater-16.0-asdoc.zip!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/m2/com/adobe/air/framework/applicationupdater/16.0/applicationupdater-16.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

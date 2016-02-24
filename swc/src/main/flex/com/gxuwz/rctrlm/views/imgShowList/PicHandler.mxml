@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/23.
+-->
+<s:Panel
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:mx="library://ns.adobe.com/flex/mx"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        title="图像处理">
+
+    <fx:Script><![CDATA[
+        import com.gxuwz.rctrlm.events.PictureHandlerEvent;
+        import com.gxuwz.rctrlm.views.command.ImgVideoCtrl;
+        import com.gxuwz.rctrlm.views.videoCtrl.VideoCtrl;
+
+        private function takePhoto_clickHandler(event:MouseEvent):void {
+            var e:PictureHandlerEvent = new PictureHandlerEvent("takePicEvent");
+            this.dispatchEvent(e);
+        }
+
+        private function edit_bt_clickHandler(event:MouseEvent):void {
+            var e:PictureHandlerEvent = new PictureHandlerEvent("editorPicEvent");
+            this.dispatchEvent(e);
+        }
+
+
+        private function merge_bt_clickHandler(event:MouseEvent):void {
+            var e:PictureHandlerEvent = new PictureHandlerEvent("mergePicEvent");
+            this.dispatchEvent(e);
+        }
+
+
+        private function exitButton_clickHandler(event:MouseEvent):void {
+            var e:PictureHandlerEvent = new PictureHandlerEvent("exitPicEvent");
+            this.dispatchEvent(e);
+        }
+        ]]>
+    </fx:Script>
+
+    <fx:Metadata>
+        [Event(name="takePicEvent",type="flash.events.Event")]
+        [Event(name="editorPicEvent",type="flash.events.Event")]
+        [Event(name="mergePicEvent",type="flash.events.Event")]
+        [Event(name="exitPicEvent",type="flash.events.Event")]
+    </fx:Metadata>
+
+
+  <s:layout>
+    <s:VerticalLayout  verticalAlign="middle"/>
+  </s:layout>
+
+  <!--<s:HGroup width="100%"  verticalAlign="middle">-->
+    <s:Button id="takePhoto" label="拍照" click="takePhoto_clickHandler(event)"/>
+
+  <!--</s:HGroup>-->
+    <!--<s:HGroup width="100%"  verticalAlign="middle">-->
+        <s:Button id="edit_bt" label="编辑" click="edit_bt_clickHandler(event)"/>
+    <!--</s:HGroup>-->
+
+  <!--<s:HGroup width="100%"  verticalAlign="middle">-->
+    <s:Button id="merge_bt" label="融合" click="merge_bt_clickHandler(event)"/>
+  <!--</s:HGroup>-->
+
+  <!--<s:HGroup width="100%"  verticalAlign="middle">-->
+    <s:Button id="exitButton" label="退出图像处理" click="exitButton_clickHandler(event)"/>
+  <!--</s:HGroup>-->
+
+</s:Panel>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/23.
+-->
+<s:VGroup
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:sendPanel="com.gxuwz.rctrlm.views.chat.*"
+        creationComplete="creationCompleteHandler()">
+
+  <fx:Script>
+    <![CDATA[
+      import com.gxuwz.rctrlm.events.ConServerBarEvent;
+      import com.gxuwz.rctrlm.events.EventDispatcherFactory;
+      import com.gxuwz.rctrlm.events.SendPanelEvent;
+
+
+      [Bindable]
+      private var _connected:String = "UnConnected";
+      [Bindable]
+      private var _remoteUser:String;
+      [Bindable]
+      private var _netConnection:NetConnection
+
+      public function get remoteUser():String {
+          return _remoteUser;
+      }
+
+      public function set remoteUser(value:String):void {
+          _remoteUser = value;
+      }
+
+      public function get netConnection():NetConnection {
+          return _netConnection;
+      }
+
+      public function set netConnection(value:NetConnection):void {
+          _netConnection = value;
+          if (_netConnection) {
+              _connected = "Connected ....";
+          }
+      }
+
+
+      private function creationCompleteHandler():void {
+          EventDispatcherFactory.getEventDispatcher()
+                  .addEventListener(ConServerBarEvent.SHOW_MESSAGE_EVENT,
+                  showMessageEventHandler);
+      }
+
+      private function showMessageEventHandler(e:ConServerBarEvent):void {
+          trace(e.remoteUser + "  remoteUser");
+          trace(e.data + "  message ");
+          _remoteUser = e.remoteUser;
+          msgArea.text += _remoteUser + "  :  " + e.data + "\n";
+      }
+
+
+      private function sendMessageEventHandler(event:SendPanelEvent):void {
+          trace(event._msg+"=====msg");
+          trace(_remoteUser+" remote user")
+          _netConnection.call("sendMsg",null,_remoteUser,event._msg);
+          msgArea.text +=   "我 :  " + event._msg + "\n";
+          sendPanel.say.text="";
+      }
+      ]]>
+ </fx:Script>
+
+
+  <s:HGroup width="100%" height="100%">
+
+    <s:TextArea width="75%" id="msgArea" height="100%" />
+
+    <s:Panel width="25%" height="100%"
+             cornerRadius="5">
+        <s:layout>
+            <s:VerticalLayout paddingBottom="5" paddingRight="5" paddingTop="5" paddingLeft="5"/>
+        </s:layout>
+
+      <s:Label text="当前连接状态  :  {_connected}"/>
+      <s:Label text="当前连接用户  :  {_remoteUser}"/>
+    </s:Panel>
+
+  </s:HGroup>
+
+  <sendPanel:SendPanel
+          width="100%" id="sendPanel"
+          sendMessageEvent="sendMessageEventHandler(event)"/>
+</s:VGroup>

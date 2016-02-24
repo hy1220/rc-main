@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.adobe.air.framework:aircore:swc:16.0" type="flex">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/air/framework/aircore/16.0/aircore-16.0.swc!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/air/framework/aircore/16.0/aircore-16.0-asdoc.zip!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/adobe/air/framework/aircore/16.0/aircore-16.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

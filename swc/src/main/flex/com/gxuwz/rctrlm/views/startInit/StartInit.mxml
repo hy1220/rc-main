@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<s:VGroup
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        creationComplete="creationCompleteHandler(event)"
+        paddingBottom="2" paddingLeft="2"
+        paddingRight="2" paddingTop="2">
+
+    <fx:Metadata>
+      //打开显微镜
+      [Event(name="OpenComEvent", type="flash.events.MouseEvent")]
+      //关闭显微镜
+      [Event(name="CloseComEvent", type="flash.events.Event")]
+      //选择显微镜
+      [Event(name="CameraSelectionEvent", type="flash.events.Event")]
+      //聚焦显微镜
+      [Event(name="FocusInitEvent", type="flash.events.MouseEvent")]
+      //自动聚焦
+      [Event(name="No_FocusInitEvent", type="flash.events.MouseEvent")]
+      [Event(name="Obj_con_rest", type="flash.events.MouseEvent")]
+      //断开显微镜
+      [Event(name="release_camera", type="flash.events.MouseEvent")]
+    </fx:Metadata>
+
+  <fx:Script>
+    <![CDATA[
+    import com.gxuwz.rctrlm.utils.WriteToText;
+
+    import mx.collections.ArrayList;
+    import mx.events.FlexEvent;
+
+    [Bindable]
+    private var cameraNames:ArrayList = new ArrayList();
+
+    protected function creationCompleteHandler(event:FlexEvent):void
+    {
+      var cameras:Array = Camera.names;
+      if (cameras)
+      {
+        cameraNames.source = cameras;
+        trace("here in StartInit");
+      }
+      else
+      {
+        trace("No camera available.\n");
+      }
+    }
+
+    /**
+     * 摄像头重新选择之后，需要处理的四件事情：
+     * 1.在主程序中保存当前摄像头选择的参数cameraIndex要改变
+     * 2.新选择的摄像头要调整它的模式和画面质量
+     * 3.显示当前视频的窗口要改变视频
+     * 4.如果当前正处于视频传输状态，则要改变传输的视频流
+     */
+    private function cameraChanged(event:Event = null):void
+    {
+      trace("dispatch  CameraSelectionEvent");
+      dispatchEvent(new Event("CameraSelectionEvent"));
+    }
+
+
+    //自动调焦
+    protected function initFocus_clickHandler(event:MouseEvent):void
+    {
+      //物镜复位
+      dispatchEvent(new MouseEvent("Obj_con_rest"));
+      var firstFocus:Timer = new Timer(3000,1);
+      firstFocus.addEventListener(TimerEvent.TIMER, firstFocusEXE,false,0,true);
+      firstFocus.start();
+
+    }
+    //首次调焦
+    private function firstFocusEXE(event:TimerEvent):void{
+      trace(event.target.currentCount+"  in StartInit.mxml's firstFocusEXE");
+      switch(event.target.currentCount)
+      {
+        //自动聚焦
+        case 1:dispatchEvent(new MouseEvent("FocusInitEvent"));break;
+      }
+
+    }
+
+    // 连接显微镜
+    protected function initFocus_no_Focus_clickHandler(event:MouseEvent):void
+    {
+      //dispatch No_FocusInitEvent for outside (ImgVideoCtrl Class) to set the camera
+     // WriteToText.writeToTxtLog("dispatch  No_FocusInitEvent in StartInit MXML");
+      dispatchEvent(new MouseEvent("No_FocusInitEvent"));
+    }
+
+    //断开显微镜连接
+    protected function release_camera_clickHandler(event:MouseEvent):void
+    {
+      // TODO Auto-generated method stub
+      dispatchEvent(new MouseEvent("release_camera"));
+    }
+
+    ]]>
+  </fx:Script>
+
+    <!--<s:layout>-->
+      <!--<s:VerticalLayout  paddingBottom="2"-->
+                        <!--paddingLeft="2" paddingRight="2" paddingTop="2"/>-->
+    <!--</s:layout>-->
+    <s:HGroup width="100%" >
+      <s:Button id="initFocus_no_Focus" label="连接显微镜"
+                click="initFocus_no_Focus_clickHandler(event)" />
+      <s:Button id="initFocus" label="自动调焦"
+                click="initFocus_clickHandler(event)"/>
+    </s:HGroup>
+
+    <s:HGroup width="100%" verticalAlign="middle" >
+      <s:Label  text="选择摄像头"/>
+      <s:ComboBox id="cameraSelection_cb"
+                  width="60%" dataProvider="{cameraNames}"
+                  change="cameraChanged(event)"/>
+    </s:HGroup>
+
+
+</s:VGroup>

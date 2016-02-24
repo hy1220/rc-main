@@ -1,0 +1,736 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<mx:TabNavigator xmlns:mx="library://ns.adobe.com/flex/mx"
+                 xmlns:fx="http://ns.adobe.com/mxml/2009"
+                 xmlns:commond="com.gxuwz.rctrlm.views.command.*"
+                 xmlns:s="library://ns.adobe.com/flex/spark"
+                creationComplete="appComplete()">
+
+  <fx:Declarations>
+    <!--<fx:XML id="obj_con_list_default" source=" G:/projects/microscope/rCtrlMicroscope-air-main/swc/src/main/resources/assets/obj_con_list_default.xml" />-->
+<!-- -->
+    <fx:XML id="obj_con_list_default"  source="/obj_con_list_default.xml"/>
+      <!--<fx:XML id="obj_con_list" source="obj_con_list_default.xml"  />-->
+  </fx:Declarations>
+
+  <fx:Script>
+    <![CDATA[
+      import com.gxuwz.rctrlm.model.Objective;
+      import com.gxuwz.rctrlm.model.Regulate;
+      import com.gxuwz.rctrlm.utils.fluorinefx.aperture.LocalObject;
+
+      import mx.collections.XMLListCollection;
+      import mx.events.FlexEvent;
+
+      import spark.components.Alert;
+
+      public var userXMLFile:File; // 用户设置好的XML配置文件
+      [Bindable]
+      public var obj_con_list:XML; // The XML data
+      [Bindable]
+      public var stream:FileStream; // The FileStream object used to read and write prefsFile data.
+      [Bindable]
+      public var obj_con_list_xmlCl:XMLListCollection;
+      //    [Bindable] public var obj_con_list_default:XML;
+
+      [Bindable]
+      private var _netStream:NetStream;
+      [Bindable]
+      private var _lc:LocalObject;
+
+      public function get lc():LocalObject {
+          return _lc;
+      }
+
+      public function set lc(value:LocalObject):void {
+          _lc = value;
+          trace(_lc.toString() + "  in  Command  value   ");
+      }
+
+      public function get netStream():NetStream {
+          return _netStream;
+      }
+
+      public function set netStream(value:NetStream):void {
+          _netStream = value;
+      }
+
+
+      //一般按钮事件
+      public const FOCUS_ADD:String = "$0MU10000000015!";//焦距加
+      public const DIRECTED_UP:String = "$0MU30000000002!";
+      public const DIRECTED_DOWN:String = "$0MD30000000002!";
+      public const DIRECTED_LEFT:String = "$0MU40000000002!";
+      public const DIRECTED_RIGHT:String = "$0MD40000000002!";
+      public const FOCUS_SUB:String = "$0MD10000000015!";//焦距减
+      public const OBJ_CON_ADD:String = "$0MU20000001600!";//物镜转换加
+      public const OBJ_CON_SUB:String = "$0MD20000001600!";//物镜转换减
+      public const CONDENSER_INSERT_ADD:String = "$0EU30000000090!";//聚光镜插入
+      public const CONDENSER_INSERT_SUB:String = "$0EU30000000000!";//聚光镜撤离
+      public const FOCAL_DISTANCE_ADD:String = "$0MU11000000000!";//聚焦升起粗调
+      public const FOCAL_DISTANCE_ADD_STOP:String = "$0MU12000000000!";//聚焦升停机
+      public const FOCAL_DISTANCE_SUB:String = "$0MD11000000000!";//聚焦降落粗调
+      public const FOCAL_DISTANCE_SUB_STOP:String = "$0MD12000000000!";//聚焦降停机
+      public const SET_DEFAULT:String = "$0EX00000000000!";//恢复参数设置
+      public const FOCUS_RESET:String = "$0MR10000000000!";//聚焦电机复位
+      public const FOUS_ACCELERATION:String = "$0MA100000";//焦电机加速度
+      public const OBJ_CON_RESET:String = "$0MR20000000000!";//物镜转换电机复位
+
+      //部件调节
+      public var value:Number = 0;
+      public const SUB:int = 0;
+      public const ADD:int = 1;
+      public var CONDENSER_REGULATE:Regulate;//聚光器
+      public var CONVERGENT_LENS_REGULATE:Regulate;//聚光镜
+      public var COLLECTING_MIRROR_REGULATE:Regulate;//集光镜
+      public var BACKLIGHT_REGULATE:Regulate;//背光亮度
+      //    public var CONDENSER_REGULATE:Regulate=
+      //            new Regulate("$0EU2000000000",
+      //                    "$0EU200000000",
+      //                    "$0EU20000000",
+      //                    "$0EU20000000180!",
+      //                    condenser_vslider.value);//聚光器
+      //    public var CONVERGENT_LENS_REGULATE:Regulate=
+      //            new Regulate("$0EU4000000000",
+      //                    "$0EU400000000",
+      //                    "$0EU40000000",
+      //                    "$0EU40000000180!",
+      //                    light_bar_vslider.value);//聚光镜
+      //    public var COLLECTING_MIRROR_REGULATE:Regulate=
+      //            new Regulate("$0EU5000000000",
+      //                    "$0EU500000000",
+      //                    "$0EU50000000",
+      //                    "$0EU50000000180!",
+      //                    light_bar_vslider.value);//集光镜
+      //    public var BACKLIGHT_REGULATE:Regulate=
+      //            new Regulate("$0EU1000000000",
+      //                    "$0EU100000000",
+      //                    "$0EU10000000",
+      //                    "$0EU10000000180!",
+      //                    10);//背光亮度
+      //////////////////////////参数设定///////////////////////////////////////////////
+      public const FOUS_DECELERATION:String = "$0MC100000";//焦电机减速度
+      public const FOUS_RUN_SPEED:String = "$0MS100000";//焦电机运行速度
+      public const STAGETR_ACCELERATION:String = "$0MA300000";//载物台横向电机加速度
+      public const STAGETR_DECELERATION:String = "$0MC300000";//载物台横向电机减速度
+      public const STAGETR_RUN_SPEED:String = "$0MS300000";//载物台横向电机运行速度
+      public const STAGELT_ACCELERATION:String = "$0MA400000";//载物台纵向电机加速度
+      public const STAGELT_DECELERATION:String = "$0MC400000";//载物台纵向电机减速度
+      public const STAGELT_RUN_SPEED:String = "$0MS400000";//载物台纵向电机运行速度
+      public const OBJLEN_ACCELERATION:String = "$0MA200000";//物镜转换电机加速度
+      public const OBJLEN_DECELERATION:String = "$0MC200000";//物镜转换电机减速度
+
+
+      public const OBJLEN_RUN_SPEED:String = "$0MS200000";//物镜转换电机运行速度
+
+
+      /*************     显微镜控制            ************/
+
+      protected function normal_Handler(str:String):void {
+          _lc.sendMessageFun(str);
+      }
+
+      protected function regulate_clickHandler(regulate:Regulate, control:int):void {
+          var str:String;
+          switch (control) {
+              case SUB:
+                  value -= regulate.number;
+                  break;
+              case ADD:
+                  value += regulate.number;
+                  trace("ADD value is" + value);
+                  break;
+
+          }
+          if (value <= 0) {
+              value = 0;
+          }
+          if (value >= 180) {
+              value = 180;
+          }
+          if (value <= 9) {
+              str = regulate.oneDigit + value + "!";
+          }
+          else if (value >= 10 && value < 100) {
+              str = regulate.twoDigit + value + "!";
+          }
+          else if (value >= 100 && value < 180) {
+              str = regulate.threeDigitLess + value + "!";
+          }
+          else if (value >= 180) {
+              str = regulate.threeDigitMore;
+          }
+          _lc.sendMessageFun(str)
+      }
+
+      protected function set_speed_clickHandler(str:String):void {
+          str += setSpeed_2.text + "!";
+          _lc.sendMessageFun(str);
+      }
+
+      //////////////////////////////////物镜的直接跳转///////////////////////////////////////////
+
+      protected function obj_clickHandler(ob:Objective):void {
+          //物镜复位
+          _lc.sendMessageFun(OBJ_CON_RESET);
+          // 创建一个新的 Timer
+          var platformCmdTimer:Timer = ob.timer;
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrderExe, false, 0, true);
+          //platformCmdTimer.addEventListener(TimerEvent.TIMER_COMPLETE,focus_set,false,0,true);
+          platformCmdTimer.start();
+      }
+
+      //直接转到1#物镜，并设置了聚光栏、集光栏、物镜插入
+      protected function obj_con_1_clickHandler(event:Event):void {
+          //物镜复位
+          var obj_con_1_cmd:String = "$0MR20000000000!";
+          _lc.sendMessageFun(obj_con_1_cmd);
+          // 创建一个新的6秒的 Timer
+          var platformCmdTimer:Timer = new Timer(3000, 3);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrderExe, false, 0, true);
+          //	platformCmdTimer.addEventListener(TimerEvent.TIMER_COMPLETE,focus_set,false,0,true);
+          platformCmdTimer.start();
+
+      }
+
+      //物镜1时间延时方法
+      private function obj_conOrderExe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          trace("tick" + event.target.currentCount);
+
+          try {
+
+              var order_cmd:Number = event.target.currentCount;
+              switch (order_cmd) {
+                  case 1:
+                      _lc.sendMessageFun("$0EU4000000" + judgeNumberHandler(obj_con_list.obj_con_1.spot_light) + "!");
+                      break;//聚光镜光栏调整
+                  case 2:
+                      _lc.sendMessageFun("$0EU5000000" + judgeNumberHandler(obj_con_list.obj_con_1.set_light) + "!");
+                      break;//集光镜光栏调整
+                  case 3:
+                      var set_light_cmd:String;
+                      break;
+                      if (obj_con_list.obj_con_1.condenser_insert == 0) {
+                          set_light_cmd = "$0EU30000000000!";
+                      }
+                      else {
+                          set_light_cmd = "$0EU30000000090!";
+                      }
+                      _lc.sendMessageFun(set_light_cmd);
+                      break;//集光镜的插入与撤离
+              }
+          } catch (e:Error) {
+              trace("")
+          }
+
+
+      }
+
+      //直接转到2#物镜，并设置了聚光栏、集光栏、物镜插入
+      protected function obj_con_2_clickHandler(event:Event):void {
+          //复位
+          var obj_con_1_cmd:String = "$0MR20000000000!";
+          _lc.sendMessageFun(obj_con_1_cmd);
+          // 创建一个新的12秒的 Timer
+          var platformCmdTimer:Timer = new Timer(3000, 4);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrder_2Exe, false, 0, true);
+          platformCmdTimer.start();
+      }
+
+      //物镜2时间延时方法
+      private function obj_conOrder_2Exe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          var order_cmd:Number = event.target.currentCount;
+          switch (order_cmd) {
+              case 1:
+                  _lc.sendMessageFun("$0MD20000001600!");
+                  break;//转到物镜2
+              case 2:
+                  _lc.sendMessageFun("$0EU4000000" + judgeNumberHandler(obj_con_list.obj_con_2.spot_light) + "!");
+                  break;//聚光镜光栏调整
+              case 3:
+                  _lc.sendMessageFun("$0EU5000000" + judgeNumberHandler(obj_con_list.obj_con_2.set_light) + "!");
+                  break;//集光镜光栏调整
+              case 4:
+                  var set_light_cmd:String;
+                  if (obj_con_list.obj_con_2.condenser_insert == 0) {
+                      set_light_cmd = "$0EU30000000000!";
+                  }
+                  else {
+                      set_light_cmd = "$0EU30000000090!";
+                  }
+                  _lc.sendMessageFun(set_light_cmd);
+                  break;//集光镜的插入与撤离
+              //case 5:dispatchEvent(new MouseEvent("FocusEvent_2"));break;
+              //case 5:focus_set_2();break;
+          }
+      }
+
+      //直接转到3#物镜，并设置了聚光栏、集光栏、物镜插入
+      protected function obj_con_3_clickHandler(event:Event):void {
+          //复位
+          var obj_con_1_cmd:String = "$0MR20000000000!";
+          _lc.sendMessageFun(obj_con_1_cmd);
+          // 创建一个新的12秒的 Timer
+          var platformCmdTimer:Timer = new Timer(3000, 4);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrder_3Exe, false, 0, true);
+          platformCmdTimer.start();
+      }
+
+      //物镜3时间延时方法
+      private function obj_conOrder_3Exe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          var order_cmd:Number = event.target.currentCount;
+          switch (order_cmd) {
+              case 1:
+                  _lc.sendMessageFun("$0MD20000003200!");
+                  break;//转到物镜3
+              case 2:
+                  _lc.sendMessageFun("$0EU4000000" + judgeNumberHandler(obj_con_list.obj_con_3.spot_light) + "!");
+                  break;//聚光镜光栏调整
+              case 3:
+                  _lc.sendMessageFun("$0EU5000000" + judgeNumberHandler(obj_con_list.obj_con_3.set_light) + "!");
+                  break;//集光镜光栏调整
+              case 4:
+                  var set_light_cmd:String;
+                  if (obj_con_list.obj_con_3.condenser_insert == 0) {
+                      set_light_cmd = "$0EU30000000000!";
+                  }
+                  else {
+                      set_light_cmd = "$0EU30000000090!";
+                  }
+                  _lc.sendMessageFun(set_light_cmd);
+                  break;//集光镜的插入与撤离
+              //case 5:dispatchEvent(new MouseEvent("FocusEvent_3"));break;
+              //case 5:focus_set_3();break;
+          }
+      }
+
+      //直接转到4#物镜，并设置了聚光栏、集光栏、物镜插入
+      protected function obj_con_4_clickHandler(event:Event):void {
+          //复位
+          var obj_con_1_cmd:String = "$0MR20000000000!";
+          _lc.sendMessageFun(obj_con_1_cmd);
+          // 创建一个新的8秒的 Timer
+          var platformCmdTimer:Timer = new Timer(3000, 4);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrder_4Exe, false, 0, true);
+          platformCmdTimer.start();
+      }
+
+      //物镜4时间延时方法
+      private function obj_conOrder_4Exe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          var order_cmd:Number = event.target.currentCount;
+          switch (order_cmd) {
+              case 1:
+                  _lc.sendMessageFun("$0MU20000003200!");
+                  break;//转到物镜4
+              case 2:
+                  _lc.sendMessageFun("$0EU4000000" + judgeNumberHandler(obj_con_list.obj_con_4.spot_light) + "!");
+                  break;//聚光镜光栏调整
+              case 3:
+                  _lc.sendMessageFun("$0EU5000000" + judgeNumberHandler(obj_con_list.obj_con_4.set_light) + "!");
+                  break;//集光镜光栏调整
+              case 4:
+                  var set_light_cmd:String;
+                  if (obj_con_list.obj_con_4.condenser_insert == 0) {
+                      set_light_cmd = "$0EU30000000000!";
+                  }
+                  else {
+                      set_light_cmd = "$0EU30000000090!";
+                  }
+                  _lc.sendMessageFun(set_light_cmd);
+                  break;//集光镜的插入与撤离
+              //case 5:dispatchEvent(new MouseEvent("FocusEvent_4"));break;
+              //case 5:focus_set_4();
+          }
+
+      }
+
+      //直接转到5#物镜，并设置了聚光栏、集光栏、物镜插入
+      protected function obj_con_5_clickHandler(event:Event):void {
+          //复位
+          var obj_con_1_cmd:String = "$0MR20000000000!";
+          _lc.sendMessageFun(obj_con_1_cmd);
+          var platformCmdTimer:Timer = new Timer(3000, 4);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, obj_conOrder_5Exe, false, 0, true);
+          platformCmdTimer.start();
+
+      }
+
+      //物镜5时间延时方法
+      private function obj_conOrder_5Exe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          var order_cmd:Number = event.target.currentCount;
+          switch (order_cmd) {
+              case 1:
+                  _lc.sendMessageFun("$0MU20000001600!");
+                  break;//转到物镜5
+              case 2:
+                  _lc.sendMessageFun("$0EU4000000" + judgeNumberHandler(obj_con_list.obj_con_5.spot_light) + "!");
+                  break;//聚光镜光栏调整
+              case 3:
+                  _lc.sendMessageFun("$0EU5000000" + judgeNumberHandler(obj_con_list.obj_con_5.set_light) + "!");
+                  break;//集光镜光栏调整
+              case 4:
+                  var set_light_cmd:String;
+                  if (obj_con_list.obj_con_5.condenser_insert == 0) {
+                      set_light_cmd = "$0EU30000000000!";
+                  }
+                  else {
+                      set_light_cmd = "$0EU30000000090!";
+                  }
+                  _lc.sendMessageFun(set_light_cmd);
+                  break;//集光镜的插入与撤离
+              //case 5:dispatchEvent(new MouseEvent("FocusEvent_5"));break;
+              //case 5:focus_set_5();
+          }
+
+      }
+
+      //指令判断函数
+      protected function judgeNumberHandler(number:Number):String {
+          // TODO Auto-generated method stub
+          var returnStr:String;
+          if (number < 0) {
+              returnStr = "0000";
+          } else if (number < 10) {
+              returnStr = "000" + number.toString();
+          } else if (number < 100) {
+              returnStr = "00" + number.toString();
+          } else if (number <= 180) {
+              returnStr = "0" + number.toString();
+          } else if (number > 180) {
+              returnStr = "0180";
+          }
+          return returnStr;
+      }
+
+      //////////////////////////物镜参数设置///////////////////////////////////////////////
+
+      /**
+       * 空间创建完成之后，加载用户配置文件obj_con_list.xml到datagrid里
+       *
+       *
+       */
+      public function appComplete():void {
+          //stage.nativeWindow.addEventListener(Event.CLOSING, windowClosingHandler);
+          userXMLFile = File.applicationDirectory;
+          userXMLFile = userXMLFile.resolvePath("obj_con_list.xml");
+          readXML();
+          CONDENSER_REGULATE =
+                  new Regulate("$0EU2000000000",
+                          "$0EU200000000",
+                          "$0EU20000000",
+                          "$0EU20000000180!",
+                          condenser_vslider.value);//聚光器
+          CONVERGENT_LENS_REGULATE =
+                  new Regulate("$0EU4000000000",
+                          "$0EU400000000",
+                          "$0EU40000000",
+                          "$0EU40000000180!",
+                          light_bar_vslider.value);//聚光镜
+          COLLECTING_MIRROR_REGULATE =
+                  new Regulate("$0EU5000000000",
+                          "$0EU500000000",
+                          "$0EU50000000",
+                          "$0EU50000000180!",
+                          light_bar_vslider.value);//集光镜
+          BACKLIGHT_REGULATE =
+                  new Regulate("$0EU1000000000",
+                          "$0EU100000000",
+                          "$0EU10000000",
+                          "$0EU10000000180!",
+                          10);//背光亮度
+
+      }
+
+      /**
+       * 尝试读取用户配置文件，如果配置文件存在，则打开，
+       * 并调用processXMLData()处理数据
+       */
+      private function readXML():void {
+          stream = new FileStream();
+          try {
+              if (userXMLFile.exists) {
+                  stream.open(userXMLFile, FileMode.READ);
+                  processXMLData();
+              }
+              else {
+                  obj_con_list_xmlCl = new XMLListCollection(obj_con_list_default.children());
+                  saveData();
+              }
+          } catch (e:IOErrorEvent) {
+              Alert.show("文件操作失败");
+          }
+
+      }
+
+      /**
+       * 读xml文件，并将数据传送给obj_con_list_xmlCl（dataGrid绑定的变量）
+       */
+      private function processXMLData():void {
+          obj_con_list = XML(stream.readUTFBytes(stream.bytesAvailable));
+          obj_con_list_xmlCl = new XMLListCollection(obj_con_list.children());
+          stream.close();
+
+      }
+
+      /**
+       * 设置最新数据的时候，可以点击按钮保存最新数据到用户xml文件
+       *创建xml数据结构并且保存到xml中
+       */
+      private function saveData():void {
+          createXMLData();
+          writeXMLData();
+      }
+
+      /**
+       * 从dataGrid表格里获取数据并写入xml
+       *
+       */
+      private function createXMLData():void {
+          obj_con_list = <obj_con/>;
+          obj_con_list.obj_con_1.number = "1#";
+          obj_con_list.obj_con_1.spot_light = obj_con_set.getElementAt(0, 1);
+          obj_con_list.obj_con_1.set_light = obj_con_set.getElementAt(0, 2);
+          obj_con_list.obj_con_1.condenser_insert = obj_con_set.getElementAt(0, 3);
+          obj_con_list.obj_con_1.focus_set = obj_con_set.getElementAt(0, 4);
+
+          obj_con_list.obj_con_2.number = "2#";
+          obj_con_list.obj_con_2.spot_light = obj_con_set.getElementAt(1, 1);
+          obj_con_list.obj_con_2.set_light = obj_con_set.getElementAt(1, 2);
+          obj_con_list.obj_con_2.condenser_insert = obj_con_set.getElementAt(1, 3);
+          obj_con_list.obj_con_1.focus_set = obj_con_set.getElementAt(1, 4);
+
+
+          obj_con_list.obj_con_3.number = "3#";
+          obj_con_list.obj_con_3.spot_light = obj_con_set.getElementAt(2, 1);
+          obj_con_list.obj_con_3.set_light = obj_con_set.getElementAt(2, 2);
+          obj_con_list.obj_con_3.condenser_insert = obj_con_set.getElementAt(2, 3);
+          obj_con_list.obj_con_1.focus_set = obj_con_set.getElementAt(2, 4);
+
+
+          obj_con_list.obj_con_4.number = "4#";
+          obj_con_list.obj_con_4.spot_light = obj_con_set.getElementAt(3, 1);
+          obj_con_list.obj_con_4.set_light = obj_con_set.getElementAt(3, 2);
+          obj_con_list.obj_con_4.condenser_insert = obj_con_set.getElementAt(3, 3);
+          obj_con_list.obj_con_1.focus_set = obj_con_set.getElementAt(3, 4);
+
+
+          obj_con_list.obj_con_5.number = "5#";
+          obj_con_list.obj_con_5.spot_light = obj_con_set.getElementAt(4, 1);
+          obj_con_list.obj_con_5.set_light = obj_con_set.getElementAt(4, 2);
+          obj_con_list.obj_con_5.condenser_insert = obj_con_set.getElementAt(4, 3);
+          obj_con_list.obj_con_1.focus_set = obj_con_set.getElementAt(4, 4);
+
+      }
+
+      /**
+       *写入xml文件
+       *
+       */
+      private function writeXMLData():void {
+          var outputString:String = '<?xml version="1.0" encoding="utf-8"?>\n';
+          outputString += obj_con_list.toXMLString();
+          outputString = outputString.replace(/\n/g, File.lineEnding);
+          var wr:File = new File(userXMLFile.nativePath);
+          stream = new FileStream();
+          stream.open(wr, FileMode.WRITE);
+          stream.writeUTFBytes(outputString);
+          stream.close();
+      }
+
+      /**
+       *用户设置最新数据之后，
+       * 保存最新数据的按钮点击函数
+       */
+      protected function obj_con_choose_save_bt_clickHandler():void {
+          // TODO Auto-generated method stub
+          saveData();
+          Alert.show("最新设置，保存成功！！！");
+      }
+
+      /**
+       *用户恢复默认数据的按钮点击函数
+       */
+      protected function obj_con_choose_reset_bt_clickHandler():void {
+          // TODO Auto-generated method stub obj_con_list_default
+          obj_con_list_xmlCl = new XMLListCollection(obj_con_list_default.children());
+          saveData();
+          Alert.show("成功恢复默认值！！！");
+      }
+
+      //载物台复位
+      protected function platforms_reset_bt_clickHandler():void {
+          //横向复位
+          _lc.sendMessageFun("$0MR40000000000!")
+          // 创建一个新的3秒的 Timer
+          var platformCmdTimer:Timer = new Timer(2000, 3);
+          // 为间隔和完成事件指定侦听器
+          platformCmdTimer.addEventListener(TimerEvent.TIMER, platformOrderExe, false, 0, true);
+          platformCmdTimer.start();
+      }
+
+
+      public function platformOrderExe(event:TimerEvent):void {
+          // 显示到目前为止的时间计数
+          // 该事件的目标是 Timer 实例本身。
+          trace("tick" + event.target.currentCount);
+          var order_cmd:Number = event.target.currentCount;
+          switch (order_cmd) {
+              case 1:
+                  _lc.sendMessageFun("$0MD40000002080!");
+                  break;//横向回到中间
+              case 2:
+                  _lc.sendMessageFun("$0MR30000000000!");
+                  break;//纵向复位
+              case 3:
+                  _lc.sendMessageFun("$0MD30000001290!");
+                  break;//纵向回到中间
+          }
+      }
+
+      private function obj_con_set_creationCompleteHandler(event:FlexEvent):void {
+
+      }
+      ]]>
+  </fx:Script>
+
+
+  <s:NavigatorContent width="100%" height="100%" label="控制">
+
+    <s:Button id="backward" x="53" y="5" width="50" height="21" label="后移"
+              click="normal_Handler(DIRECTED_DOWN)"/>
+    <s:Button id="forward" x="53" y="68" width="54" height="20" label="前移"
+              click="normal_Handler(DIRECTED_UP)"/>
+    <s:Button id="left" x="6" y="39" width="49" label="左移"
+              click="normal_Handler(DIRECTED_LEFT)"/>
+    <s:Button id="right" x="101" y="39" width="51" label="右移"
+              click="normal_Handler(DIRECTED_RIGHT)"/>
+    <s:RichText x="53" y="104" fontSize="14" text="平台控制"/>
+    <s:Button x="10" y="145" width="49" height="19" label="聚焦+"/>
+    <s:Button id="focus_sub" x="10" y="172" width="58" height="20" label="聚焦-"
+              click="normal_Handler(FOCUS_SUB)"/>
+    <s:Button id="focus_add" x="10" y="145" width="57" height="19" label="聚焦+"
+              click="normal_Handler(FOCUS_ADD)"/>
+    <s:Button id="obj_con_add" x="75" y="144" width="90" label="物镜转换+"
+              click="normal_Handler(OBJ_CON_ADD)"/>
+    <s:Button id="obj_con_sub" x="76" y="171" width="90" label="物镜转换-"
+              click="normal_Handler(OBJ_CON_SUB)"/>
+
+    <s:Button id="condenser_sub" x="178" y="173" width="91" height="19" label="聚光器降"
+              click="regulate_clickHandler(CONDENSER_REGULATE,SUB)"/>
+    <s:Button id="condenser_add" x="179" y="145" width="90" height="20" label="聚光器升"
+              click="regulate_clickHandler(CONDENSER_REGULATE,ADD)"/>
+    <s:Button id="spot_light_bar_sub" x="180" y="34" width="91" height="19" label="聚光镜光栏-"
+              click="regulate_clickHandler(CONVERGENT_LENS_REGULATE,SUB)"/>
+    <s:Button id="spot_light_bar_add" x="180" y="6" width="91" height="20" label="聚光镜光栏+"
+              click="regulate_clickHandler(CONVERGENT_LENS_REGULATE,ADD)"/>
+    <s:Button id="set_light_bar_sub" x="179" y="97" width="90" label="集光镜光栏-"
+              click="regulate_clickHandler(COLLECTING_MIRROR_REGULATE,SUB)"/>
+    <s:Button id="set_light_bar_add" x="179" y="67" width="90" label="集光镜光栏+"
+              click="regulate_clickHandler(COLLECTING_MIRROR_REGULATE,ADD)"/>
+    <s:Button id="backlight_add" x="202" y="209" width="90" label="背光亮度加"
+              click="regulate_clickHandler(BACKLIGHT_REGULATE,ADD)"/>
+    <s:Button id="backlight_sub" x="202" y="239" width="90" label="背光亮度减"
+              click="regulate_clickHandler(BACKLIGHT_REGULATE,SUB)"/>
+
+
+    <s:Button id="condenser_insert_add" x="10" y="209" label="聚光镜插入"
+              click="normal_Handler(CONDENSER_INSERT_ADD)"/>
+    <s:Button id="condenser_insert_sub" x="10" y="239" width="80" label="聚光镜撤离"
+              click="normal_Handler(CONDENSER_INSERT_SUB)"/>
+    <s:Button id="max_focus_add" x="105" y="209" label="聚焦粗调+"
+              mouseDown="normal_Handler(FOCAL_DISTANCE_ADD)" mouseUp="normal_Handler(FOCAL_DISTANCE_ADD_STOP)"/>
+    <s:Button id="max_focus_sub" x="105" y="239" label="聚焦粗调-"
+              mouseDown="normal_Handler(FOCAL_DISTANCE_SUB)" mouseUp="normal_Handler(FOCAL_DISTANCE_SUB_STOP)"/>
+    <s:Button id="focus_reset" x="110" y="269" label="聚焦电机复位"
+              click="normal_Handler(FOCUS_RESET)"/>
+    <s:Button id="obj_con_reset" x="10" y="269" width="92" label="物镜电机复位"
+              click="normal_Handler(OBJ_CON_RESET)"/>
+
+    <s:VSlider id="condenser_vslider" x="291" y="146" height="46" maximum="20"  minimum="1"
+               stepSize="1" value="1"/>
+    <s:VSlider id="light_bar_vslider" x="291" y="17" height="95" maximum="20" minimum="1"
+               stepSize="1" value="1"/>
+
+    <s:Button id="obj_con_1" x="9" y="319" width="55" label="物镜1"
+              click="obj_con_1_clickHandler(event)"/>
+    <s:Button id="obj_con_2" x="69" y="319" width="55" label="物镜2"
+              click="obj_con_2_clickHandler(event)"/>
+    <s:Button id="obj_con_3" x="130" y="319" width="55" label="物镜3"
+              click="obj_con_3_clickHandler(event)"/>
+    <s:Button id="obj_con_4" x="193" y="319" width="55" label="物镜4"
+              click="obj_con_4_clickHandler(event)"/>
+    <s:Button id="obj_con_5" x="257" y="319" width="55" label="物镜5"
+              click="obj_con_5_clickHandler(event)"/>
+    <s:RichText x="10" y="299" fontSize="13" text="物镜选择"/>
+    <s:Button id="platforms_reset_bt" x="222" y="269" label="平台复位"
+              click="platforms_reset_bt_clickHandler()"/>
+    <s:RichText x="292" y="0" fontSize="16" text="+"/>
+    <s:RichText x="294" y="112" fontSize="16" text="-"/>
+    <s:RichText x="292" y="133" fontSize="16" text="+"/>
+    <s:RichText x="294" y="190" fontSize="16" text="-"/>
+
+  </s:NavigatorContent>
+  <s:NavigatorContent id="obj_con_choose" width="100%" height="100%" label="物镜设置">
+    <commond:Obj_con_set_DataGrid id="obj_con_set" y="0" width="306" height="160"
+                                  dataProvider="{obj_con_list_xmlCl}" horizontalCenter="0" creationComplete="obj_con_set_creationCompleteHandler(event)"
+                                  requestedRowCount="5"
+                                  variableRowHeight="false"
+                                  sortableColumns="false"
+                                  editable="true"/>
+    <s:Button id="obj_con_choose_save_bt" x="64" y="205" label="保存新设置"
+              click="obj_con_choose_save_bt_clickHandler()"/>
+    <s:Button id="obj_con_choose_reset_bt" x="174" y="204" label="恢复默认值"
+              click="obj_con_choose_reset_bt_clickHandler()"/>
+  </s:NavigatorContent>
+  <s:NavigatorContent width="100%" height="100%" label="参数设置">
+    <s:Button id="set_fous_acceleration" x="173" y="113" width="143" label="聚焦电机加速度"
+              click="set_speed_clickHandler(FOUS_ACCELERATION)"/>
+    <s:Button id="set_fous_deceleration" x="170" y="145" width="146" label="聚焦电机减速度"
+              click="set_speed_clickHandler(FOUS_DECELERATION)"/>
+    <s:Button id="set_fous_run_speed" x="170" y="175" width="146" label="聚焦电机运行速度"
+              click="set_speed_clickHandler(FOUS_RUN_SPEED)"/>
+    <s:Button id="set_stageTr_acceleration" x="10" y="10" width="153" label="载物台横向电机加速度"
+              click="set_speed_clickHandler(STAGETR_ACCELERATION)"/>
+    <s:Button id="set_stageTr_deceleration" x="10" y="40" width="152" label="载物台横向电机减速度"
+              click="set_speed_clickHandler(STAGETR_DECELERATION)"/>
+    <s:Button id="set_stageTr_run_speed" x="10" y="70" label="载物台横向电机运行速度"
+              click="set_speed_clickHandler(STAGETR_RUN_SPEED)"/>
+    <s:Button id="set_stageLt_acceleration" x="168" y="10" label="载物台纵向电机加速度"
+              click="set_speed_clickHandler(STAGELT_ACCELERATION)"/>
+    <s:Button id="set_stageLt_deceleration" x="170" y="40" width="138" label="载物台纵向电机减速度"
+              click="set_speed_clickHandler(STAGELT_DECELERATION)"/>
+    <s:Button id="set_stageLt_run_speed" x="170" y="70" width="156" label="载物台纵向电机运行速度"
+              click="set_speed_clickHandler(STAGELT_RUN_SPEED)"/>
+    <s:Button id="set_objlen_acceleration" x="9" y="112" width="152" height="25" label="物镜转换电机加速度"
+              click="set_speed_clickHandler(OBJLEN_ACCELERATION)"/>
+    <s:Button id="set_objlen_deceleration" x="10" y="145" width="152" label="物镜转换电机减速度"
+              click="set_speed_clickHandler(OBJLEN_DECELERATION)"/>
+    <s:Button id="set_objlen_run_speed" x="10" y="175" width="152" label="物镜转换电机运行速度"
+              click="set_speed_clickHandler(OBJLEN_RUN_SPEED)"/>
+
+    <s:RichText x="10" y="295" fontSize="16" text="速度设定"/>
+    <s:TextInput id="setSpeed_2" x="87" y="276" width="153" height="35"/>
+    <s:Button id="setDefault" x="105" y="222" width="117" height="46" label="恢复参数设置"
+              click="normal_Handler(SET_DEFAULT)" fontSize="14"/>
+  </s:NavigatorContent>
+
+</mx:TabNavigator>
+

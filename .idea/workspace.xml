@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6774e1c6-0d35-47aa-a4c5-79980494dbbf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/UserAddEvent.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/swc/src/main/resources/obj_con_list_default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/conServerBar/ConServerBar.mxml" afterPath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/conServerBar/ConServerBar.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml" afterPath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml" afterPath="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_adobe_air_framework_aircore_swc_16_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_adobe_air_framework_aircore_swc_16_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_adobe_air_framework_airglobal_swc_16_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_adobe_air_framework_airglobal_swc_16_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/air/pom.xml" afterPath="$PROJECT_DIR$/air/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swc-gxuwz.dspLab.remoteCtrlMicroscope.xml" afterPath="$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swc-gxuwz.dspLab.remoteCtrlMicroscope.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swf-gxuwz.dspLab.remoteCtrlMicroscope.xml" afterPath="$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swf-gxuwz.dspLab.remoteCtrlMicroscope.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="rCtrlMicroscope-air.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/air/target/" />
+    <ignored path="$PROJECT_DIR$/swf/target/" />
+    <ignored path="$PROJECT_DIR$/swc/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/.idea/flexmojos/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="rCtrlMicroscope-air" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MainCanvas.mxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.5">
+              <caret line="248" column="18" selection-start-line="248" selection-start-column="18" selection-end-line="248" selection-end-column="18" />
+              <folding>
+                <marker date="1456314597079" expanded="false" signature="594:1169" placeholder="..." />
+                <marker date="1456314597079" expanded="true" signature="1179:1391" placeholder="/** the  main task are : ...*/" />
+                <marker date="1456314597079" expanded="true" signature="1400:1436" placeholder="/** 定义变量，进行传值 ...*/" />
+                <marker date="1456314597079" expanded="true" signature="1438:1555" placeholder="//..." />
+                <marker date="1456314597079" expanded="true" signature="1931:1966" placeholder="/** 监听连接服务状况 ...*/" />
+                <marker date="1456314597079" expanded="true" signature="2023:2760" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="2024:2069" placeholder="//..." />
+                <marker date="1456314597079" expanded="true" signature="2770:2847" placeholder="/*...*/" />
+                <marker date="1456314597079" expanded="true" signature="2857:2978" placeholder="/** make sure connection the miscroscope ...*/" />
+                <marker date="1456314597079" expanded="true" signature="3063:3564" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="3103:3211" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="3243:3399" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="3432:3510" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="3575:3641" placeholder="/*...*/" />
+                <marker date="1456314597079" expanded="true" signature="3695:3767" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="3831:3963" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4028:4103" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4167:4241" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4305:4379" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4449:4524" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4534:4614" placeholder="/*...*/" />
+                <marker date="1456314597079" expanded="true" signature="4698:5124" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="4897:5038" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="5055:5114" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="5134:5298" placeholder="/** 1. connect to server success ,the user login ...*/" />
+                <marker date="1456314597079" expanded="true" signature="5375:6223" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="5466:6213" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="6338:6855" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="6384:6624" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="6630:6792" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="6865:7026" placeholder="/** disconnection from expert and termination connection with expert ...*/" />
+                <marker date="1456314597079" expanded="true" signature="7112:7381" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="7391:7601" placeholder="/** whild calling remoter user and try to cancel but don't disconnection to server ...*/" />
+                <marker date="1456314597079" expanded="true" signature="7685:7790" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="7800:7869" placeholder="/** call remote epxert ...*/" />
+                <marker date="1456314597079" expanded="true" signature="7947:8489" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="7986:8317" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="8323:8479" placeholder="{...}" />
+                <marker date="1456314597079" expanded="true" signature="8572:8625" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImgVideoCtrl.mxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="4.736232">
+              <caret line="337" column="71" selection-start-line="337" selection-start-column="71" selection-end-line="337" selection-end-column="71" />
+              <folding>
+                <marker date="1456249308371" expanded="false" signature="2453:3097" placeholder="..." />
+                <marker date="1456249308371" expanded="true" signature="3107:3154" placeholder="/** 调用融合图片主程序的exe所需的全局变量 ...*/" />
+                <marker date="1456249308371" expanded="true" signature="3823:3863" placeholder="/** 定义自动对焦所需的全局变量 ...*/" />
+                <marker date="1456249308371" expanded="true" signature="3996:4031" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4088:4164" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4224:4270" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4340:4387" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4435:4475" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4533:4907" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4591:4659" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4683:4832" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4836:4897" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="4965:5154" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="5164:5211" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="5275:6128" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="5401:5465" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="5494:5596" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="6138:6180" placeholder="/**点击删除按钮删除位图。 ...*/" />
+                <marker date="1456249308371" expanded="true" signature="6236:7325" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="6352:7218" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="6620:7204" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="7224:7315" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="7384:8084" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="7515:7581" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="7633:7752" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="7803:8074" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8149:8646" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8279:8346" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8398:8464" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8516:8635" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8701:8807" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="8865:8987" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9044:9354" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9158:9318" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9412:9793" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9597:9757" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9847:10891" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="9866:10805" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="10525:10645" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="10662:10791" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="10698:10773" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="10827:10880" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="10901:10948" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="10958:11005" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="11110:11222" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="11136:11212" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="11232:11349" placeholder="/** StartInit组件上，打开com按钮的功能有两个： ...*/" />
+                <marker date="1456249308371" expanded="true" signature="11430:11814" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="11445:11480" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="11517:11552" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="11565:11804" placeholder="/*...*/" />
+                <marker date="1456249308371" expanded="true" signature="11861:12406" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="11875:11990" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="12225:12362" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="12453:13202" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="12472:13110" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="13132:13192" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="13275:14000" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="13485:13588" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="13650:13947" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="14010:14048" placeholder="/** 点击聚焦按钮,开始聚焦 ...*/" />
+                <marker date="1456249308371" expanded="true" signature="14090:14421" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="14273:14410" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="14465:15489" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="14514:14575" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="14617:15405" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="15427:15479" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="15554:16095" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="15661:15764" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="15798:16042" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="16106:16380" placeholder="/** ...*/" />
+                <marker date="1456249308371" expanded="true" signature="16430:17102" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="16444:16955" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="16957:17049" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="17148:18252" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="17191:17302" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="17467:17646" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="17673:18176" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="18180:18242" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="18354:20296" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="18356:18455" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="18493:18678" placeholder="//..." />
+                <marker date="1456249308371" expanded="true" signature="18695:20210" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="20232:20285" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="20363:20426" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="20436:20493" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="20503:20562" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="20844:20887" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="20947:20991" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="21068:21407" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="21485:21829" placeholder="{...}" />
+                <marker date="1456249308371" expanded="true" signature="21839:21914" placeholder="/**...*/" />
+                <marker date="1456249308371" expanded="true" signature="21968:22034" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/air/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="23" selection-start-line="47" selection-start-column="9" selection-end-line="49" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flex 4 Component" />
+        <option value="ActionScript Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hy1220" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/utils/fluorinefx/aperture/LocalObject.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/CanmandEvent.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/CommandEvent.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/imgShowList/ImageShow.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/conServerBar/ConServerBar1.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/utils/WriteToText.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/startInit/StartInit.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/videoCtrl/VideoCtrl.mxml" />
+        <option value="$USER_HOME$/Desktop/main.lua" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/model/Regulate.as" />
+        <option value="$PROJECT_DIR$/swc/pom.xml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/ConServerBarEvent.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/presenter/ConServerBarPresenter.as" />
+        <option value="$PROJECT_DIR$/air/src/main/air/rCtrlMicroscope-air-app.xml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/UserAddEvent.as" />
+        <option value="$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swc-gxuwz.dspLab.remoteCtrlMicroscope.xml" />
+        <option value="E:/apache-maven-3.1.1/settings.xml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/model/Services.as" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/Command.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/conServerBar/ConServerBar.mxml" />
+        <option value="$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml" />
+        <option value="$PROJECT_DIR$/air/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/apache-maven-3.1.1" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.1.1\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="rCtrlMicroscope-air" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="rCtrlMicroscope-air" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="19" />
+    <option name="y" value="504" />
+    <option name="width" value="1366" />
+    <option name="height" value="771" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rCtrlMicroscope-air" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rCtrlMicroscope-air" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rCtrlMicroscope-air-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rCtrlMicroscope-air" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rCtrlMicroscope-air-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="air" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.111328125" />
+    <property name="project.structure.side.proportion" value="0.5846154" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\projects\microscope\最新\rCtrlMicroscope-air-main\swc\src\main\flex\com\gxuwz\rctrlm\views\command" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\air\src\main\resources\assets" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\swc\src\main\flex\com\gxuwz\rctrlm\views\command" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\swc\src\main\resources\assets\sound" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\projects\microscope\最新\rCtrlMicroscope-air-main\swc\src\main\resources" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\air\src\main\resources" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\swc\src\main\resources" />
+      <recent name="G:\projects\microscope\rCtrlMicroscope-air-main\swc\src\main\flex\com\gxuwz\rctrlm\views\conServerBar" />
+    </key>
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="com.gxuwz.rctrlm.events" />
+      <recent name="com.gxuwz.rctrlm.views.command" />
+      <recent name="com.gxuwz.rctrlm.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flash App.rCtrlMicroscope-air-swf">
+    <configuration default="false" name="rCtrlMicroscope-air-swf" type="FlashRunConfigurationType" factoryName="Flash App" temporary="true" nameIsGenerated="true">
+      <option name="BCName" value="rCtrlMicroscope-air-swf" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="rCtrlMicroscope-air-swf" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Flash App.rCtrlMicroscope-air-swf" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Flash App.rCtrlMicroscope-air-swf" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\hy2\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6774e1c6-0d35-47aa-a4c5-79980494dbbf" name="Default" comment="" />
+      <created>1453559718809</created>
+      <option name="number" value="Default" />
+      <updated>1453559718809</updated>
+      <workItem from="1453559724638" duration="1139000" />
+      <workItem from="1453599471591" duration="197000" />
+      <workItem from="1453603452160" duration="225000" />
+      <workItem from="1453611736737" duration="331000" />
+      <workItem from="1453612173896" duration="1069000" />
+      <workItem from="1453636289601" duration="538000" />
+      <workItem from="1453638393339" duration="612000" />
+      <workItem from="1453640230862" duration="1885000" />
+      <workItem from="1453644139278" duration="2200000" />
+      <workItem from="1453687312617" duration="7673000" />
+      <workItem from="1453698786620" duration="2796000" />
+      <workItem from="1453703147701" duration="4194000" />
+      <workItem from="1453710472117" duration="1291000" />
+      <workItem from="1453723256724" duration="15000" />
+      <workItem from="1453724139127" duration="6688000" />
+      <workItem from="1453731449725" duration="1235000" />
+      <workItem from="1453733495469" duration="2106000" />
+      <workItem from="1453737208200" duration="2739000" />
+      <workItem from="1453746086077" duration="2119000" />
+      <workItem from="1453748921012" duration="1488000" />
+      <workItem from="1453779546361" duration="231000" />
+      <workItem from="1453781620613" duration="6049000" />
+      <workItem from="1453789284707" duration="10236000" />
+      <workItem from="1453804781336" duration="3146000" />
+      <workItem from="1453817076431" duration="3459000" />
+      <workItem from="1453823693123" duration="435000" />
+      <workItem from="1453858774922" duration="3556000" />
+      <workItem from="1453865011400" duration="21580000" />
+      <workItem from="1453895630587" duration="255000" />
+      <workItem from="1453896306104" duration="3449000" />
+      <workItem from="1453902342481" duration="7382000" />
+      <workItem from="1453910288742" duration="1358000" />
+      <workItem from="1453946532198" duration="27018000" />
+      <workItem from="1453984510262" duration="11239000" />
+      <workItem from="1453997413315" duration="6021000" />
+      <workItem from="1454164328153" duration="52000" />
+      <workItem from="1455531444878" duration="1281000" />
+      <workItem from="1455536681353" duration="1559000" />
+      <workItem from="1455538940957" duration="4231000" />
+      <workItem from="1455547259431" duration="2442000" />
+      <workItem from="1455582292156" duration="6402000" />
+      <workItem from="1455589712615" duration="2337000" />
+      <workItem from="1455592528534" duration="4412000" />
+      <workItem from="1455598415494" duration="18556000" />
+      <workItem from="1455625871123" duration="274000" />
+      <workItem from="1455627403443" duration="273000" />
+      <workItem from="1455628564994" duration="2393000" />
+      <workItem from="1455669198202" duration="51000" />
+      <workItem from="1455669362560" duration="1368000" />
+      <workItem from="1455671054965" duration="10000" />
+      <workItem from="1455671169748" duration="4661000" />
+      <workItem from="1455679366915" duration="421000" />
+      <workItem from="1455680722111" duration="3060000" />
+      <workItem from="1455685398051" duration="32730000" />
+      <workItem from="1455774425536" duration="5000" />
+      <workItem from="1456190438439" duration="4475000" />
+      <workItem from="1456195982712" duration="14000" />
+      <workItem from="1456196547363" duration="288000" />
+      <workItem from="1456208271226" duration="12189000" />
+      <workItem from="1456222020325" duration="1157000" />
+      <workItem from="1456232652378" duration="584000" />
+      <workItem from="1456241197242" duration="642000" />
+      <workItem from="1456242145782" duration="693000" />
+      <workItem from="1456243142506" duration="1407000" />
+      <workItem from="1456245115146" duration="106000" />
+      <workItem from="1456248274576" duration="194000" />
+      <workItem from="1456248517648" duration="1077000" />
+      <workItem from="1456284672687" duration="1946000" />
+      <workItem from="1456290811772" duration="934000" />
+      <workItem from="1456297712615" duration="1472000" />
+      <workItem from="1456310293590" duration="9315000" />
+    </task>
+    <task id="LOCAL-00001" summary="时间：2016-02-18 13：21&#10;完成：&#10;1.用户登录信息共享&#10;2.用户连接服务操作修改&#10;整个项目:&#10;1.用户登录和取消完成&#10;2.显微镜连接正常&#10;3.专家端发送的命令正常接收&#10;">
+      <created>1455773081327</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1455773081327</updated>
+    </task>
+    <task id="LOCAL-00002" summary="时间：2016-02-18 13：44&#10;动作：在air的resources/assets中添加main中间代码&#10;&#10;">
+      <created>1455774314652</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1455774314652</updated>
+    </task>
+    <task id="LOCAL-00003" summary="时间：2016-02-18 13：21&#10;完成：&#10;1.用户登录信息共享&#10;2.用户连接服务操作修改&#10;整个项目:&#10;1.用户登录和取消完成&#10;2.显微镜连接正常&#10;3.专家端发送的命令正常接收&#10;">
+      <created>1456244086639</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1456244086639</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="268965000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="19" y="504" width="1366" height="771" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3480315" sideWeight="0.4941435" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39274925" sideWeight="0.5237037" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11777778" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39274925" sideWeight="0.4762963" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24518518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4031496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31181103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3480315" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43779528" sideWeight="0.50292826" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12079063" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26456693" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2635432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31181103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4031496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成：&#10;1.用户登录信息共享&#10;2.用户连接服务操作修改" />
+    <MESSAGE value="时间：2016-02-18 13：44&#10;动作：在air的resources/assets中添加main中间代码&#10;&#10;" />
+    <MESSAGE value="时间：2016-02-18 13：21&#10;完成：&#10;1.用户登录信息共享&#10;2.用户连接服务操作修改&#10;整个项目:&#10;1.用户登录和取消完成&#10;2.显微镜连接正常&#10;3.专家端发送的命令正常接收&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间：2016-02-18 13：21&#10;完成：&#10;1.用户登录信息共享&#10;2.用户连接服务操作修改&#10;整个项目:&#10;1.用户登录和取消完成&#10;2.显微镜连接正常&#10;3.专家端发送的命令正常接收&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swf/src/main/flex/main.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="200" column="65" selection-start-line="200" selection-start-column="65" selection-end-line="200" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swf/src/main/flex/main.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swf/src/main/flex/main.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/EventDispatcherFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/PictureHandlerEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flex/framework/spark/4.14.1/spark-4.14.1.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33175355">
+          <caret line="6688" column="25" selection-start-line="6688" selection-start-column="25" selection-end-line="6688" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/imgShowList/ImageShow.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/utils/SaveParameterUtils.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15763547">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/SendPanelEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20977917">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/utils/fluorinefx/aperture/LocalObject.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3317757">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/videoCtrl/VideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10714286">
+          <caret line="202" column="63" selection-start-line="202" selection-start-column="63" selection-end-line="202" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/model/Objective.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/main.lua">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27737227">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swf-gxuwz.dspLab.remoteCtrlMicroscope.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49025974">
+          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/air/rCtrlMicroscope-control-air.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8310626">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/model/Regulate.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54469275">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/startInit/StartInit.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.428571">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/presenter/ConServerBarPresenter.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.628242">
+          <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/adobe/air/framework/airglobal/16.0/airglobal-16.0.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4707317">
+          <caret line="207" column="42" selection-start-line="207" selection-start-column="42" selection-end-line="207" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/ConServerBarEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/air/src/main/resources/assets/main（2016-02-18用户登录信息共享）.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/apache-maven-3.1.1/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.695238">
+          <caret line="240" column="21" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/UserAddEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36190477">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/flexmojos/rCtrlMicroscope-air-swc-gxuwz.dspLab.remoteCtrlMicroscope.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6461187">
+          <caret line="69" column="106" selection-start-line="69" selection-start-column="106" selection-end-line="69" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/model/Services.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/events/CommandEvent.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39041096">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/resources/obj_con_list_default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5743381">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/air/src/main/air/rCtrlMicroscope-air-app.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55150217">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/Command.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="548" column="47" selection-start-line="548" selection-start-column="47" selection-end-line="548" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/conServerBar/ConServerBar.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.607143">
+          <caret line="242" column="54" selection-start-line="242" selection-start-column="54" selection-end-line="242" selection-end-column="54" />
+          <folding>
+            <marker date="1456287123710" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="/** 用户点击“连接”按钮，将会执行一下功能： ...*/" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="/** 用户点击“取消”按钮，派发事件OnHangupEvent,将会执行一下功能： ...*/" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="/** 用户点击“呼叫”按钮，派发事件onCallEvent,将会执行一下功能： ...*/" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="/** 用户点击“正在呼叫中的取消”按钮，“已经建立连接”按钮，“呼叫失败”按钮， ...*/" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="//..." />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1456287123710" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2638888">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/air/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="23" selection-start-line="47" selection-start-column="9" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/MainCanvas.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="248" column="18" selection-start-line="248" selection-start-column="18" selection-end-line="248" selection-end-column="18" />
+          <folding>
+            <marker date="1456314597079" expanded="false" signature="594:1169" placeholder="..." />
+            <marker date="1456314597079" expanded="true" signature="1179:1391" placeholder="/** the  main task are : ...*/" />
+            <marker date="1456314597079" expanded="true" signature="1400:1436" placeholder="/** 定义变量，进行传值 ...*/" />
+            <marker date="1456314597079" expanded="true" signature="1438:1555" placeholder="//..." />
+            <marker date="1456314597079" expanded="true" signature="1931:1966" placeholder="/** 监听连接服务状况 ...*/" />
+            <marker date="1456314597079" expanded="true" signature="2023:2760" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="2024:2069" placeholder="//..." />
+            <marker date="1456314597079" expanded="true" signature="2770:2847" placeholder="/*...*/" />
+            <marker date="1456314597079" expanded="true" signature="2857:2978" placeholder="/** make sure connection the miscroscope ...*/" />
+            <marker date="1456314597079" expanded="true" signature="3063:3564" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="3103:3211" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="3243:3399" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="3432:3510" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="3575:3641" placeholder="/*...*/" />
+            <marker date="1456314597079" expanded="true" signature="3695:3767" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="3831:3963" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4028:4103" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4167:4241" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4305:4379" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4449:4524" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4534:4614" placeholder="/*...*/" />
+            <marker date="1456314597079" expanded="true" signature="4698:5124" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="4897:5038" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="5055:5114" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="5134:5298" placeholder="/** 1. connect to server success ,the user login ...*/" />
+            <marker date="1456314597079" expanded="true" signature="5375:6223" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="5466:6213" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="6338:6855" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="6384:6624" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="6630:6792" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="6865:7026" placeholder="/** disconnection from expert and termination connection with expert ...*/" />
+            <marker date="1456314597079" expanded="true" signature="7112:7381" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="7391:7601" placeholder="/** whild calling remoter user and try to cancel but don't disconnection to server ...*/" />
+            <marker date="1456314597079" expanded="true" signature="7685:7790" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="7800:7869" placeholder="/** call remote epxert ...*/" />
+            <marker date="1456314597079" expanded="true" signature="7947:8489" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="7986:8317" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="8323:8479" placeholder="{...}" />
+            <marker date="1456314597079" expanded="true" signature="8572:8625" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swc/src/main/flex/com/gxuwz/rctrlm/views/command/ImgVideoCtrl.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.736232">
+          <caret line="337" column="71" selection-start-line="337" selection-start-column="71" selection-end-line="337" selection-end-column="71" />
+          <folding>
+            <marker date="1456249308371" expanded="false" signature="2453:3097" placeholder="..." />
+            <marker date="1456249308371" expanded="true" signature="3107:3154" placeholder="/** 调用融合图片主程序的exe所需的全局变量 ...*/" />
+            <marker date="1456249308371" expanded="true" signature="3823:3863" placeholder="/** 定义自动对焦所需的全局变量 ...*/" />
+            <marker date="1456249308371" expanded="true" signature="3996:4031" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4088:4164" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4224:4270" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4340:4387" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4435:4475" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4533:4907" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4591:4659" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4683:4832" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4836:4897" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="4965:5154" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="5164:5211" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="5275:6128" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="5401:5465" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="5494:5596" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="6138:6180" placeholder="/**点击删除按钮删除位图。 ...*/" />
+            <marker date="1456249308371" expanded="true" signature="6236:7325" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="6352:7218" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="6620:7204" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="7224:7315" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="7384:8084" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="7515:7581" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="7633:7752" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="7803:8074" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8149:8646" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8279:8346" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8398:8464" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8516:8635" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8701:8807" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="8865:8987" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9044:9354" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9158:9318" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9412:9793" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9597:9757" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9847:10891" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="9866:10805" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="10525:10645" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="10662:10791" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="10698:10773" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="10827:10880" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="10901:10948" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="10958:11005" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="11110:11222" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="11136:11212" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="11232:11349" placeholder="/** StartInit组件上，打开com按钮的功能有两个： ...*/" />
+            <marker date="1456249308371" expanded="true" signature="11430:11814" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="11445:11480" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="11517:11552" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="11565:11804" placeholder="/*...*/" />
+            <marker date="1456249308371" expanded="true" signature="11861:12406" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="11875:11990" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="12225:12362" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="12453:13202" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="12472:13110" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="13132:13192" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="13275:14000" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="13485:13588" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="13650:13947" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="14010:14048" placeholder="/** 点击聚焦按钮,开始聚焦 ...*/" />
+            <marker date="1456249308371" expanded="true" signature="14090:14421" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="14273:14410" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="14465:15489" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="14514:14575" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="14617:15405" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="15427:15479" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="15554:16095" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="15661:15764" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="15798:16042" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="16106:16380" placeholder="/** ...*/" />
+            <marker date="1456249308371" expanded="true" signature="16430:17102" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="16444:16955" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="16957:17049" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="17148:18252" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="17191:17302" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="17467:17646" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="17673:18176" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="18180:18242" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="18354:20296" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="18356:18455" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="18493:18678" placeholder="//..." />
+            <marker date="1456249308371" expanded="true" signature="18695:20210" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="20232:20285" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="20363:20426" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="20436:20493" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="20503:20562" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="20844:20887" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="20947:20991" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="21068:21407" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="21485:21829" placeholder="{...}" />
+            <marker date="1456249308371" expanded="true" signature="21839:21914" placeholder="/**...*/" />
+            <marker date="1456249308371" expanded="true" signature="21968:22034" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>flex_sdk_4.14.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>rCtrlMicroscope-air-swf|rCtrlMicroscope-air-swf</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>AdobeAIRSDK-16.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.adobe.air.framework:applicationupdater:swc:16.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.5846154" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

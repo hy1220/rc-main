@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/20.
+-->
+<s:ComboBoxGridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009"
+                          xmlns:s="library://ns.adobe.com/flex/spark"
+                          xmlns:mx="library://ns.adobe.com/flex/mx">
+
+  <s:dataProvider>
+    <mx:ArrayList>
+      <fx:String>0</fx:String>
+      <fx:String>1</fx:String>
+    </mx:ArrayList>
+  </s:dataProvider>
+
+</s:ComboBoxGridItemEditor>

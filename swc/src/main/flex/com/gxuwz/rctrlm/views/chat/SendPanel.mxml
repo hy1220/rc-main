@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+  Created by user on 2015/8/23.
+-->
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009"
+          xmlns:s="library://ns.adobe.com/flex/spark"
+          verticalAlign="middle">
+
+
+    <fx:Script>
+        <![CDATA[
+        import com.gxuwz.rctrlm.events.SendPanelEvent;
+
+        private function onSend():void {
+            var event:SendPanelEvent=new SendPanelEvent("sendMessageEvent");
+            event._msg=say.text;
+            dispatchEvent(event);
+        }
+        ]]>
+    </fx:Script>
+    <fx:Metadata>
+        [Event(name="sendMessageEvent",type="com.gxuwz.rctrlm.events.SendPanelEvent")]
+    </fx:Metadata>
+
+  <s:TextInput id="say" width="50%" height="100%" enter="onSend()"/>
+  <s:Button label="发送"  click="onSend()"/>
+  <s:Button label="清除"  click="{say.text=''}"/>
+
+
+</s:HGroup>
